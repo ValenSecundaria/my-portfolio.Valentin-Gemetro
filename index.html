@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="es">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Leo Carter — Digital Experiences &amp; Engineering</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title data-i18n="page.title">Valentín Gemetro — Desarrollador Full Stack &amp; Estudiante de Ingeniería en Sistemas
+  </title>
 
   <!-- Google Fonts: Geist, Geist Mono, Inter, JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -65,14 +69,23 @@
     }
 
     /* Headings Typography: Geist with font-weight: 700 and tracking-tight */
-    h1, h2, h3, h4, h5, h6, .font-heading {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-heading {
       font-family: 'Geist', 'Inter', system-ui, sans-serif;
       font-weight: 700;
       letter-spacing: -0.025em;
     }
 
     /* Bonus Typography for tags, badges, stack and code: Geist Mono or JetBrains Mono */
-    .font-stack, .badge-mono, .tag-mono, .code-mono {
+    .font-stack,
+    .badge-mono,
+    .tag-mono,
+    .code-mono {
       font-family: 'Geist Mono', 'JetBrains Mono', monospace;
       letter-spacing: -0.01em;
     }
@@ -158,6 +171,7 @@
     }
   </style>
 </head>
+
 <body class="selection:bg-brand-600 selection:text-white relative font-sans antialiased">
   <!-- BEGIN: Interactive Custom Cursor -->
   <div aria-hidden="true" class="custom-cursor-dot hidden md:block" id="cursor-dot"></div>
@@ -173,24 +187,37 @@
 
   <!-- BEGIN: MainHeader -->
   <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
-    <nav class="glass-panel w-full max-w-5xl rounded-full px-5 py-3 flex items-center justify-between shadow-violet-glow transition-all duration-300">
+    <nav
+      class="glass-panel w-full max-w-5xl rounded-full px-5 py-3 flex items-center justify-between shadow-violet-glow transition-all duration-300">
       <!-- Brand Logo -->
       <a class="text-sm font-bold tracking-widest text-white uppercase flex items-center gap-2 group" href="#hero">
         <span class="w-2 h-2 rounded-full bg-brand-400 group-hover:scale-125 transition-transform duration-200"></span>
-        <span class="font-display tracking-tight text-base font-bold">LEO CARTER</span>
+        <span class="font-display tracking-tight text-base font-bold" data-i18n="nav.brand">VALENTÍN GEMETRO</span>
       </a>
       <!-- Navigation Links -->
       <ul class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-purple-200/80">
-        <li><a class="hover:text-brand-300 transition-colors" href="#projects">Projects</a></li>
-        <li><a class="hover:text-brand-300 transition-colors" href="#services">Services</a></li>
-        <li><a class="hover:text-brand-300 transition-colors" href="#experience">Experience</a></li>
-        <li><a class="hover:text-brand-300 transition-colors" href="#process">Process</a></li>
-        <li><a class="hover:text-brand-300 transition-colors" href="#faqs">FAQs</a></li>
+        <li><a class="hover:text-brand-300 transition-colors" href="#projects" data-i18n="nav.projects">Proyectos</a>
+        </li>
+        <li><a class="hover:text-brand-300 transition-colors" href="#services" data-i18n="nav.services">Servicios</a>
+        </li>
+        <li><a class="hover:text-brand-300 transition-colors" href="#experience"
+            data-i18n="nav.experience">Trayectoria</a></li>
+        <li><a class="hover:text-brand-300 transition-colors" href="#process" data-i18n="nav.process">Proceso</a></li>
+        <li><a class="hover:text-brand-300 transition-colors" href="#faqs" data-i18n="nav.faqs">Preguntas</a></li>
       </ul>
-      <!-- CTA Book a Call Button -->
-      <div>
-        <a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn hover:shadow-violet-glow transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200" href="#contact">
-          Book a call
+      <!-- Actions: Language Toggle & Contact CTA Button -->
+      <div class="flex items-center gap-3">
+        <!-- Minimalist Language Switcher Control -->
+        <button id="lang-toggle" type="button" aria-label="Cambiar idioma / Switch language"
+          class="glass-badge px-3 py-1.5 rounded-full text-xs font-mono font-semibold tracking-wider hover:border-brand-400/50 transition-all duration-200 flex items-center gap-1.5 cursor-pointer">
+          <span id="lang-btn-es" class="text-brand-300 font-bold transition-colors">ES</span>
+          <span class="text-purple-400/40">|</span>
+          <span id="lang-btn-en" class="text-purple-400/60 transition-colors">EN</span>
+        </button>
+        <!-- Contact CTA Button -->
+        <a class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn hover:shadow-violet-glow transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+          href="#contact" data-i18n="nav.cta">
+          Contactar
         </a>
       </div>
     </nav>
@@ -199,66 +226,91 @@
 
   <main class="relative z-10 pt-28">
     <!-- BEGIN: HeroSection -->
-    <section class="min-h-[88vh] flex items-center justify-center px-6 lg:px-12 py-16" data-purpose="hero-section" id="hero">
+    <section class="min-h-[88vh] flex items-center justify-center px-6 lg:px-12 py-16" data-purpose="hero-section"
+      id="hero">
       <div class="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         <!-- Hero Left Column: Copy & Actions -->
         <div class="lg:col-span-6 flex flex-col justify-center text-left">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-badge w-fit mb-6 text-brand-300 text-xs font-medium font-mono badge-mono tracking-wide">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-badge w-fit mb-6 text-brand-300 text-xs font-medium font-mono badge-mono tracking-wide">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
             </span>
-            Available for new challenges
+            <span data-i18n="hero.available">Disponible para nuevos desafíos</span>
           </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-white leading-[1.12] tracking-tight">
-            Hi! I'm Leo Carter, <br class="hidden sm:block"/>building 
-            <span class="italic font-display font-light text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-purple-200 block sm:inline mt-1 sm:mt-0">
-              Digital Experiences.
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-white leading-[1.12] tracking-tight"
+            data-i18n="hero.title" data-i18n-html="true">
+            ¡Hola! Soy Valentín Gemetro, <br class="hidden sm:block" />construyendo
+            <span
+              class="italic font-display font-light text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-purple-200 block sm:inline mt-1 sm:mt-0">
+              Experiencias Digitales.
             </span>
           </h1>
-          <p class="mt-6 text-base sm:text-lg text-purple-200/70 font-normal max-w-xl leading-relaxed">
-            From prototypes to production-ready systems, I turn ideas into scalable, user-focused products.
+          <p class="mt-6 text-base sm:text-lg text-purple-200/70 font-normal max-w-xl leading-relaxed"
+            data-i18n="hero.subtitle">
+            Estudiante Avanzado de Ingeniería en Sistemas de Información (UNS, 5º año) | Desarrollador Full Stack.
+            Transformo ideas en productos escalables, de impacto real y centrados en el usuario.
           </p>
           <!-- Action Buttons -->
           <div class="mt-9 flex flex-wrap items-center gap-4">
-            <a class="px-7 py-3 rounded-full text-sm font-semibold tracking-wide text-white bg-gradient-to-r from-brand-600 via-brand-500 to-purple-600 hover:from-brand-500 hover:to-purple-500 shadow-violet-btn hover:shadow-violet-glow transform hover:-translate-y-0.5 transition-all duration-200" href="#contact">
-              Let's Connect
+            <a class="px-7 py-3 rounded-full text-sm font-semibold tracking-wide text-white bg-gradient-to-r from-brand-600 via-brand-500 to-purple-600 hover:from-brand-500 hover:to-purple-500 shadow-violet-btn hover:shadow-violet-glow transform hover:-translate-y-0.5 transition-all duration-200"
+              href="#contact" data-i18n="hero.btnConnect">
+              Contactar
             </a>
-            <a class="px-7 py-3 rounded-full text-sm font-semibold tracking-wide text-purple-200 glass-badge hover:bg-white/10 hover:border-brand-400/40 transform hover:-translate-y-0.5 transition-all duration-200" href="#projects">
-              See My Work
+            <a class="px-7 py-3 rounded-full text-sm font-semibold tracking-wide text-purple-200 glass-badge hover:bg-white/10 hover:border-brand-400/40 transform hover:-translate-y-0.5 transition-all duration-200"
+              href="#projects" data-i18n="hero.btnWork">
+              Ver Proyectos
             </a>
           </div>
         </div>
         <!-- Hero Right Column: Graphic Silhouette with Floating Glass Stat Cards -->
         <div class="lg:col-span-6 flex items-center justify-center relative select-none">
           <!-- Outer Backlit Glow Disc -->
-          <div class="relative w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-br from-brand-900/60 via-brand-800/20 to-transparent p-1.5 flex items-center justify-center border border-brand-500/30 shadow-[0_0_80px_rgba(168,85,247,0.28)]">
+          <div
+            class="relative w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-br from-brand-900/60 via-brand-800/20 to-transparent p-1.5 flex items-center justify-center border border-brand-500/30 shadow-[0_0_80px_rgba(168,85,247,0.28)]">
             <!-- Graphic Avatar Representation -->
-            <div class="w-full h-full rounded-full overflow-hidden relative bg-[#130a21] flex items-center justify-center">
+            <div
+              class="w-full h-full rounded-full overflow-hidden relative bg-[#130a21] flex items-center justify-center">
               <svg class="w-4/5 h-4/5 text-brand-300/80 mt-10" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
+                </path>
               </svg>
-              <div class="absolute inset-0 bg-gradient-to-t from-[#08040d] via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#08040d] via-transparent to-transparent opacity-80">
+              </div>
             </div>
-            <!-- Floating Badge: 1M+ Coding Hours (Top Left) -->
-            <div class="absolute -top-4 -left-6 sm:-left-8 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
-              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight">1M+</span>
-              <span class="block text-[11px] text-purple-300/70 font-medium">Coding Hours</span>
+            <!-- Floating Badge: 5º Año (Top Left) -->
+            <div
+              class="absolute -top-4 -left-6 sm:-left-8 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
+              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight"
+                data-i18n="hero.stat1Val">5º Año</span>
+              <span class="block text-[11px] text-purple-300/70 font-medium" data-i18n="hero.stat1Label">Ing. en
+                Sistemas (UNS)</span>
             </div>
-            <!-- Floating Badge: 500+ Satisfied Clients (Top Right) -->
-            <div class="absolute -top-6 -right-4 sm:-right-8 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
-              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight">500+</span>
-              <span class="block text-[11px] text-purple-300/70 font-medium">Satisfied Clients</span>
+            <!-- Floating Badge: Full Stack (Top Right) -->
+            <div
+              class="absolute -top-6 -right-4 sm:-right-8 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
+              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight"
+                data-i18n="hero.stat2Val">Full Stack</span>
+              <span class="block text-[11px] text-purple-300/70 font-medium" data-i18n="hero.stat2Label">Next.js •
+                Python • PostgreSQL</span>
             </div>
-            <!-- Floating Badge: 140+ Projects Completed (Bottom Left) -->
-            <div class="absolute bottom-2 -left-8 sm:-left-12 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
-              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight">140+</span>
-              <span class="block text-[11px] text-purple-300/70 font-medium">Projects Completed</span>
+            <!-- Floating Badge: 3+ Proyectos (Bottom Left) -->
+            <div
+              class="absolute bottom-2 -left-8 sm:-left-12 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
+              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight"
+                data-i18n="hero.stat3Val">3+</span>
+              <span class="block text-[11px] text-purple-300/70 font-medium" data-i18n="hero.stat3Label">Proyectos
+                Principales</span>
             </div>
-            <!-- Floating Badge: 10+ Years of Experience (Bottom Right) -->
-            <div class="absolute -bottom-4 right-2 sm:-right-6 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
-              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight">10+</span>
-              <span class="block text-[11px] text-purple-300/70 font-medium">Years of Experience</span>
+            <!-- Floating Badge: UNS & Neufitech (Bottom Right) -->
+            <div
+              class="absolute -bottom-4 right-2 sm:-right-6 glass-badge rounded-2xl p-4 text-left shadow-violet-card border border-brand-500/30">
+              <span class="block text-xl sm:text-2xl font-bold text-white font-mono tracking-tight"
+                data-i18n="hero.stat4Val">UNS &amp; Neufitech</span>
+              <span class="block text-[11px] text-purple-300/70 font-medium" data-i18n="hero.stat4Label">Trayectoria
+                &amp; Docencia</span>
             </div>
           </div>
         </div>
@@ -270,109 +322,165 @@
     <section class="py-24 px-6 lg:px-12 max-w-6xl mx-auto" data-purpose="about-section" id="about">
       <!-- Section Heading -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">About Me</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          I build intuitive digital products—scalable, high-performing, and made through collaboration.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="about.title">Sobre
+          Mí</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="about.subtitle">
+          Construyo soluciones de software intuitivas, escalables y de alto rendimiento mediante ingeniería sólida y
+          trabajo en equipo.
         </p>
       </div>
       <!-- About Layout Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <!-- Left Profile Identity Card -->
-        <div class="lg:col-span-5 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-violet-card">
+        <div
+          class="lg:col-span-5 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-violet-card">
           <!-- Portrait Avatar Frame -->
-          <div class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-b from-[#221038] to-[#120822] overflow-hidden relative border border-brand-500/25 flex items-center justify-center mb-6">
+          <div
+            class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-b from-[#221038] to-[#120822] overflow-hidden relative border border-brand-500/25 flex items-center justify-center mb-6">
             <svg class="w-2/3 h-2/3 text-brand-300/70" fill="currentColor" viewbox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+              </path>
             </svg>
             <div class="absolute inset-0 bg-gradient-to-t from-[#150d22] via-transparent to-transparent"></div>
           </div>
           <!-- Availability Tag -->
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs mb-3 font-mono font-medium">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs mb-3 font-mono font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            Available for work
+            <span data-i18n="about.cardAvailable">Disponible para trabajar</span>
           </div>
-          <h3 class="text-2xl font-bold font-display text-white tracking-tight">LEO CARTER</h3>
-          <p class="text-xs sm:text-sm text-purple-200/70 mt-2 max-w-xs leading-relaxed">
-            Create seamless experiences across web, mobile, and desktop with one codebase.
+          <h3 class="text-2xl font-bold font-display text-white tracking-tight" data-i18n="about.cardName">VALENTÍN
+            GEMETRO</h3>
+          <p class="text-xs sm:text-sm text-purple-200/70 mt-2 max-w-xs leading-relaxed" data-i18n="about.cardRole">
+            Estudiante Avanzado de Ingeniería en Sistemas (UNS, 5º año) | Desarrollador Full Stack
           </p>
-          <!-- Social Links -->
+          <p class="text-[11px] text-purple-300/60 font-mono mt-1" data-i18n="about.cardLocation">
+            Bahía Blanca / Punta Alta, Buenos Aires, Argentina
+          </p>
+          <!-- Social Links with Developer's Real Contact Profiles -->
           <div class="flex items-center justify-center gap-3 my-6">
-            <!-- Instagram -->
-            <a aria-label="Instagram" class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200" href="#">
-              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-            </a>
             <!-- LinkedIn -->
-            <a aria-label="LinkedIn" class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200" href="#">
-              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+            <a aria-label="LinkedIn"
+              class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200"
+              href="https://www.linkedin.com/in/valentin-gemetro-59808a332" target="_blank" rel="noopener noreferrer"
+              title="LinkedIn Profile">
+              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                </path>
+              </svg>
             </a>
             <!-- GitHub -->
-            <a aria-label="GitHub" class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200" href="#">
-              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+            <a aria-label="GitHub"
+              class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200"
+              href="https://github.com/ValenSecundaria" target="_blank" rel="noopener noreferrer"
+              title="GitHub Profile">
+              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                </path>
+              </svg>
             </a>
-            <!-- X / Twitter -->
-            <a aria-label="X" class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200" href="#">
-              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+            <!-- Email -->
+            <a aria-label="Email"
+              class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200"
+              href="mailto:gemetrov@gmail.com" title="Enviar Email">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="1.8" viewbox="0 0 24 24">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </a>
+            <!-- Teléfono -->
+            <a aria-label="Teléfono"
+              class="w-10 h-10 rounded-full glass-badge flex items-center justify-center text-purple-300 hover:text-white hover:border-brand-400 hover:bg-brand-600/20 transition-all duration-200"
+              href="tel:+542932404925" title="Llamar / Teléfono">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="1.8" viewbox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
             </a>
           </div>
-          <a class="w-full py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn transition-all duration-200" href="#contact">
-            Let's Connect
+          <a class="w-full py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn transition-all duration-200"
+            href="#contact" data-i18n="about.cardConnectBtn">
+            Contactar
           </a>
         </div>
         <!-- Right Side: Bio and Tech Stack Panels -->
         <div class="lg:col-span-7 flex flex-col gap-6">
           <!-- Detailed Bio Card -->
           <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-violet-card">
-            <h3 class="text-2xl font-bold font-display text-white mb-4 tracking-tight">Hi! I'm Leo Carter,</h3>
-            <p class="text-sm sm:text-base text-purple-200/80 leading-relaxed mb-4">
-              a developer passionate about building meaningful digital experiences. With a focus on clean code, thoughtful design, and scalable solutions, I help turn ideas into products that people love to use.
+            <h3 class="text-2xl font-bold font-display text-white mb-4 tracking-tight" data-i18n="about.bioHeading">
+              ¡Hola! Soy Valentín Gemetro,</h3>
+            <p class="text-sm sm:text-base text-purple-200/80 leading-relaxed mb-4" data-i18n="about.bioP1">
+              Estudiante avanzado de Ingeniería en Sistemas apasionado por la construcción de software y las nuevas
+              tecnologías. Analítico, adaptable y enfocado en el desarrollo full stack y el trabajo en equipo para
+              resolver problemas de impacto real.
             </p>
-            <p class="text-sm sm:text-base text-purple-200/80 leading-relaxed">
-              I specialize in web development, cross-platform applications, and UI/UX design, blending creativity with technical expertise to deliver work that's both functional and visually compelling.
+            <p class="text-sm sm:text-base text-purple-200/80 leading-relaxed" data-i18n="about.bioP2">
+              Cuento con experiencia en unificación e integración de sistemas en Neufitech, asistencia académica en la
+              cátedra de Bases de Datos de la UNS, y desarrollo de aplicaciones modernas con Next.js, Node.js, Python
+              (FastAPI), PostgreSQL y arquitecturas en la nube.
             </p>
           </div>
           <!-- Tech Stack Container -->
-          <div class="glass-panel rounded-3xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <span class="text-base font-semibold text-white">My Tech Stack:</span>
+          <div
+            class="glass-panel rounded-3xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <span class="text-base font-semibold text-white" data-i18n="about.techStackLabel">Mi Stack
+              Tecnológico:</span>
             <div class="flex items-center gap-3 flex-wrap">
-              <!-- JS -->
-              <div class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-amber-300 text-sm shadow-[0_0_15px_rgba(251,191,36,0.15)]" title="JavaScript">
-                JS
-              </div>
-              <!-- Node -->
-              <div class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-emerald-400 text-xs shadow-[0_0_15px_rgba(52,211,153,0.15)]" title="Node.js">
-                &lt;JS/&gt;
-              </div>
-              <!-- Python -->
-              <div class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-brand-300 text-xs shadow-[0_0_15px_rgba(192,132,252,0.15)]" title="Python">
-                PY
-              </div>
-              <!-- React -->
-              <div class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.25)]" title="React">
-                <svg class="w-6 h-6 animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+              <!-- React / Next.js -->
+              <div
+                class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.25)]"
+                title="React / Next.js">
+                <svg class="w-6 h-6 animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor"
+                  stroke-width="1.8" viewbox="0 0 24 24">
                   <circle cx="12" cy="12" fill="currentColor" r="2.5"></circle>
                   <ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(0 12 12)"></ellipse>
                   <ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"></ellipse>
                   <ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"></ellipse>
                 </svg>
               </div>
+              <!-- TypeScript / JavaScript -->
+              <div
+                class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-amber-300 text-sm shadow-[0_0_15px_rgba(251,191,36,0.15)]"
+                title="TypeScript / JavaScript">
+                TS
+              </div>
+              <!-- Python / FastAPI -->
+              <div
+                class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-brand-300 text-xs shadow-[0_0_15px_rgba(192,132,252,0.15)]"
+                title="Python / FastAPI">
+                PY
+              </div>
+              <!-- PostgreSQL / SQL -->
+              <div
+                class="w-11 h-11 rounded-xl glass-badge border border-brand-400/30 flex items-center justify-center font-bold font-mono text-emerald-400 text-xs shadow-[0_0_15px_rgba(52,211,153,0.15)]"
+                title="PostgreSQL / SQL">
+                SQL
+              </div>
             </div>
           </div>
           <!-- Micro Experience Overview Box -->
           <div class="glass-panel rounded-3xl p-6 sm:p-7">
             <div class="flex items-center justify-between mb-4">
-              <h4 class="text-base font-semibold font-display text-white tracking-tight">Experience Highlights</h4>
-              <a class="text-xs text-brand-400 hover:text-brand-300 underline underline-offset-4" href="#experience">View All</a>
+              <h4 class="text-base font-semibold font-display text-white tracking-tight"
+                data-i18n="about.highlightsTitle">Destacados de Trayectoria</h4>
+              <a class="text-xs text-brand-400 hover:text-brand-300 underline underline-offset-4" href="#experience"
+                data-i18n="about.highlightsViewAll">Ver Todo</a>
             </div>
             <div class="divide-y divide-purple-900/40 text-xs sm:text-sm">
               <div class="py-2.5 flex justify-between items-center text-purple-200/90">
-                <span class="font-medium text-white">Product Designer</span>
-                <span class="text-purple-300/60">Nexus Creative</span>
-                <span class="font-mono text-purple-400">2023</span>
+                <span class="font-medium text-white" data-i18n="about.h1Role">Desarrollador Full Stack</span>
+                <span class="text-purple-300/60" data-i18n="about.h1Company">Neufitech (Ecosistema SAI)</span>
+                <span class="font-mono text-purple-400" data-i18n="about.h1Date">2026</span>
               </div>
               <div class="py-2.5 flex justify-between items-center text-purple-200/90">
-                <span class="font-medium text-white">Freelance</span>
-                <span class="text-purple-300/60">BrightLeaf Co</span>
-                <span class="font-mono text-purple-400">2021</span>
+                <span class="font-medium text-white" data-i18n="about.h2Role">Ayudante de Docencia — Base de
+                  Datos</span>
+                <span class="text-purple-300/60" data-i18n="about.h2Company">Universidad Nacional del Sur (UNS)</span>
+                <span class="font-mono text-purple-400" data-i18n="about.h2Date">UNS</span>
               </div>
             </div>
           </div>
@@ -384,86 +492,121 @@
     <!-- BEGIN: WorkExperienceSection -->
     <section class="py-24 px-6 lg:px-12 max-w-6xl mx-auto" data-purpose="experience-timeline-section" id="experience">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">Work Experience</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          A track record of crafting high-impact software, scalable architecture, and design systems.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="experience.title">
+          Trayectoria y Educación</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="experience.subtitle">
+          Historial de desarrollo de software de impacto, asistencia académica universitaria y continua formación en
+          ingeniería y ciberseguridad.
         </p>
       </div>
       <!-- Timeline Container -->
       <div class="relative border-l border-brand-500/25 ml-4 md:ml-32 pl-6 md:pl-10 space-y-12">
-        <!-- Role 1 -->
+        <!-- Role 1: Neufitech -->
         <div class="relative group">
           <!-- Timeline Indicator Node -->
-          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-[#08040d] shadow-[0_0_15px_#a855f7] group-hover:scale-125 transition-transform"></div>
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-[#08040d] shadow-[0_0_15px_#a855f7] group-hover:scale-125 transition-transform">
+          </div>
           <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight">Product Designer</h3>
-              <span class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-brand-950 text-brand-300 border border-brand-500/30 w-fit">2023 — Present</span>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="exp1.title">
+                Desarrollador Full Stack / Junior Developer</h3>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-brand-950 text-brand-300 border border-brand-500/30 w-fit"
+                data-i18n="exp1.date">Feb 2026 — Jun 2026</span>
             </div>
-            <p class="text-sm font-medium text-brand-400 mb-3">Nexus Creative • Full-time</p>
-            <p class="text-sm text-purple-200/80 leading-relaxed mb-4">
-              Leading end-to-end design and design-system engineering for core SaaS solutions. Restructured component token libraries and improved user workflow metrics by 34%.
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="exp1.company">Neufitech • Ecosistema SAI</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="exp1.desc">
+              Unificación e integración de sistemas heterogéneos dentro del ecosistema del SAI. Rediseño completo de
+              interfaz orientado a optimizar la experiencia de usuario y rendimiento para pacientes.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Design Systems</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Figma Tokens</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Next.js</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Full Stack</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Ecosistema SAI</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Integración de Sistemas</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">UI/UX &amp; Performance</span>
             </div>
           </div>
         </div>
-        <!-- Role 2 -->
+        <!-- Role 2: Ayudante de Docencia UNS -->
         <div class="relative group">
-          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-[#08040d] shadow-[0_0_10px_#9333ea] group-hover:scale-125 transition-transform"></div>
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-[#08040d] shadow-[0_0_10px_#9333ea] group-hover:scale-125 transition-transform">
+          </div>
           <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight">Full-Stack Developer &amp; Freelance</h3>
-              <span class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit">2021 — 2023</span>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="exp2.title">
+                Ayudante de Docencia — Base de Datos</h3>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit"
+                data-i18n="exp2.date">UNS • Cátedra de Base de Datos</span>
             </div>
-            <p class="text-sm font-medium text-brand-400 mb-3">BrightLeaf Co • Client Partner</p>
-            <p class="text-sm text-purple-200/80 leading-relaxed mb-4">
-              Delivered custom web applications, high-performance eCommerce platforms, and interactive client dashboards using React, TypeScript, and microservice APIs.
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="exp2.company">Universidad Nacional del Sur
+              (UNS)</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="exp2.desc">
+              Asistencia académica y práctica en sistemas de bases de datos relacionales, álgebra relacional y consultas
+              SQL.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">React</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Node.js</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Bases de Datos</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">SQL Relacional</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Álgebra Relacional</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Docencia Universitaria</span>
             </div>
           </div>
         </div>
-        <!-- Role 3 -->
+        <!-- Role 3: Ingeniería en Sistemas UNS -->
         <div class="relative group">
-          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-700 border-4 border-[#08040d] shadow-[0_0_8px_#7e22ce] group-hover:scale-125 transition-transform"></div>
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-700 border-4 border-[#08040d] shadow-[0_0_8px_#7e22ce] group-hover:scale-125 transition-transform">
+          </div>
           <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight">Graphic &amp; Interaction Designer</h3>
-              <span class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit">2024 (Contract)</span>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="exp3.title">
+                Ingeniería en Sistemas de Información</h3>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit"
+                data-i18n="exp3.date">2022 — Presente (5º año)</span>
             </div>
-            <p class="text-sm font-medium text-brand-400 mb-3">SummitWorks</p>
-            <p class="text-sm text-purple-200/80 leading-relaxed mb-4">
-              Defined visual branding identities, vector icon families, and marketing microsite interactions that elevated product market presence.
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="exp3.company">Universidad Nacional del Sur
+              (UNS)</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="exp3.desc">
+              Estudiante avanzado de 5º año. Sólida base analítica y práctica en ingeniería de software, arquitectura de
+              sistemas, algoritmia, redes y desarrollo orientado a proyectos.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Brand Identity</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Visual Interaction</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Ingeniería de Software</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Arquitectura de Sistemas</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Algoritmos</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">UNS</span>
             </div>
           </div>
         </div>
-        <!-- Role 4 -->
+        <!-- Role 4: Certificaciones y Cursos Avanzados -->
         <div class="relative group">
-          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-800 border-4 border-[#08040d] shadow-[0_0_8px_#6b21a8] group-hover:scale-125 transition-transform"></div>
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-800 border-4 border-[#08040d] shadow-[0_0_8px_#6b21a8] group-hover:scale-125 transition-transform">
+          </div>
           <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight">UX/UI Designer</h3>
-              <span class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit">2020 — 2022</span>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="exp4.title">
+                Educación &amp; Certificaciones Avanzadas</h3>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit"
+                data-i18n="exp4.date">2025 — 2026</span>
             </div>
-            <p class="text-sm font-medium text-brand-400 mb-3">UrbanFlow Lab</p>
-            <p class="text-sm text-purple-200/80 leading-relaxed mb-4">
-              Conducted in-depth user research, information architecture planning, and rapid wireframe validation for mobile and desktop applications.
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="exp4.company">IBM SkillsBuild • CACIC •
+              Cátedras UNESCO</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="exp4.desc">
+              Certificación IBM SkillsBuild: Cybersecurity Fundamentals (Agosto 2026) • Curso Intensivo de
+              Ciberseguridad con IA (CACIC, UNS, 2025) • Introducción a la Computación Cuántica (UNS &amp; Univ. do
+              Minho, 2025) • Desarrollo de Gobierno Digital (UNS &amp; Univ. de Aveiro, 2025).
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">User Research</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Prototyping</span>
-              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Usability Testing</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">IBM SkillsBuild</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Ciberseguridad con IA</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Computación Cuántica</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Gobierno Digital</span>
             </div>
           </div>
         </div>
@@ -475,18 +618,22 @@
     <section class="py-24 px-6 lg:px-12 max-w-6xl mx-auto" data-purpose="services-section" id="services">
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">Services</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          From interfaces to full-stack, I build modern products that are scalable and user-friendly.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="services.title">
+          Servicios &amp; Habilidades</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="services.subtitle">
+          Desde interfaces dinámicas hasta arquitecturas backend e integraciones complejas, construyo productos
+          robustos, escalables y centrados en el usuario.
         </p>
       </div>
       <!-- 3-Column Services Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Service Card 1: Web Development -->
-        <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
+        <div
+          class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
           <div>
             <!-- Code Window Icon Frame -->
-            <div class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex flex-col justify-between">
+            <div
+              class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex flex-col justify-between">
               <div class="flex items-center gap-1.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-brand-500/60"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-brand-500/40"></span>
@@ -494,23 +641,29 @@
               </div>
               <div class="flex items-center justify-center py-6 text-brand-400">
                 <svg class="w-16 h-16 stroke-current" fill="none" stroke-width="1.5" viewbox="0 0 24 24">
-                  <path d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
               <div class="h-2 w-1/2 bg-brand-900/40 rounded"></div>
             </div>
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">Web Development</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Build fast, scalable, and modern web apps tailored for performance and impact.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="services.s1Title">
+              Desarrollo Web Full Stack</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="services.s1Desc">
+              Construcción de aplicaciones web completas, reactivas y optimizadas para rendimiento y escalabilidad con
+              Next.js, Node.js y PostgreSQL.
             </p>
           </div>
         </div>
-        <!-- Service Card 2: Cross-Platform Development -->
-        <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
+        <!-- Service Card 2: APIs & Backend Services -->
+        <div
+          class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
           <div>
             <!-- Multi-device Icon Frame -->
-            <div class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex items-center justify-center">
-              <svg class="w-20 h-20 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <div
+              class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex items-center justify-center">
+              <svg class="w-20 h-20 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5"
+                viewbox="0 0 24 24">
                 <rect height="12" rx="2" stroke-linecap="round" width="14" x="2" y="3"></rect>
                 <path d="M6 18h6"></path>
                 <path d="M9 15v3"></path>
@@ -518,48 +671,64 @@
                 <circle cx="18" cy="18" fill="currentColor" r="0.75"></circle>
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">Cross-Platform Development</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Create seamless experiences across web, mobile, and desktop with one codebase.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="services.s2Title">APIs
+              &amp; Servicios Backend</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="services.s2Desc">
+              Diseño de APIs REST modulares y de alto rendimiento con FastAPI (Python), integración de bases de datos
+              relacionales y microservicios.
             </p>
           </div>
         </div>
-        <!-- Service Card 3: UI/UX Design -->
-        <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
+        <!-- Service Card 3: PWAs & Real-Time -->
+        <div
+          class="glass-panel rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-violet-card">
           <div>
             <!-- Cursor & Monitor Icon Frame -->
-            <div class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex items-center justify-center">
-              <svg class="w-20 h-20 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <div
+              class="w-full aspect-[4/3] rounded-2xl bg-[#140b22] border border-brand-500/30 p-4 mb-6 flex items-center justify-center">
+              <svg class="w-20 h-20 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5"
+                viewbox="0 0 24 24">
                 <rect height="13" rx="2" width="18" x="3" y="3"></rect>
                 <path d="M8 20h8"></path>
                 <path d="M12 16v4"></path>
                 <path d="M10 8l4 4-2.5.5L13 15l-1.5.5-1.5-2.5-1 1V8z" fill="currentColor" fill-opacity="0.3"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">UI/UX Design</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Design intuitive, conversion-driven interfaces that users love to interact with.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="services.s3Title">PWAs
+              &amp; Tiempo Real</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="services.s3Desc">
+              Desarrollo de Progressive Web Apps interactivas con sincronización de datos en tiempo real (Firebase),
+              emparejamiento QR y soporte offline.
             </p>
           </div>
         </div>
       </div>
-      <!-- Bottom Stats Banner -->
-      <div class="mt-8 glass-panel rounded-2xl p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center divide-y lg:divide-y-0 lg:divide-x divide-purple-900/50">
+      <!-- Bottom Stats Banner with Real Profile Metrics -->
+      <div
+        class="mt-8 glass-panel rounded-2xl p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center divide-y lg:divide-y-0 lg:divide-x divide-purple-900/50">
         <div class="pt-3 lg:pt-0">
-          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">10+</span>
-          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1">Years of Experience</span>
+          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight"
+            data-i18n="services.stat1Val">5º Año</span>
+          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1" data-i18n="services.stat1Label">Ing. en
+            Sistemas (UNS)</span>
         </div>
         <div class="pt-3 lg:pt-0">
-          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">140+</span>
-          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1">Projects Completed</span>
+          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight"
+            data-i18n="services.stat2Val">3+</span>
+          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1" data-i18n="services.stat2Label">Proyectos
+            Principales</span>
         </div>
         <div class="pt-3 lg:pt-0">
-          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">500+</span>
-          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1">Satisfied Clients</span>
+          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight"
+            data-i18n="services.stat3Val">Full Stack</span>
+          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1" data-i18n="services.stat3Label">Next.js •
+            Python • SQL</span>
         </div>
         <div class="pt-3 lg:pt-0">
-          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">1M+</span>
-          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1">Coding Hours</span>
+          <span class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight"
+            data-i18n="services.stat4Val">UNS &amp; Neufitech</span>
+          <span class="block text-xs sm:text-sm text-purple-200/70 mt-1" data-i18n="services.stat4Label">Experiencia
+            &amp; Docencia</span>
         </div>
       </div>
     </section>
@@ -569,81 +738,213 @@
     <section class="py-24 px-6 lg:px-12 max-w-6xl mx-auto" data-purpose="projects-section" id="projects">
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">Recent Projects</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          A curated mix of projects—scalable, fast, and future-ready—blending design, code, and creativity.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="projects.title">
+          Proyectos Destacados</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="projects.subtitle">
+          Una selección de aplicaciones en producción: comercio electrónico full stack, analítica predictiva de datos y
+          plataformas interactivas en tiempo real.
         </p>
       </div>
-      <!-- Projects Showcase Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Showcase Card 1 -->
+      <!-- Projects Showcase Grid: 3 Real Projects from AGENTS.md -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Showcase Card 1: Tienda River (Proyecto Principal) -->
         <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
           <!-- Web Mockup Preview with Violet Backdrop -->
-          <div class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
+          <div
+            class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
             <!-- Simulated Nav -->
-            <div class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
-              <span class="font-bold text-white font-display">CloudPeak</span>
+            <div
+              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
+              <span class="font-bold text-white font-display">Tienda River</span>
               <div class="hidden sm:flex gap-3 text-[10px] font-mono">
-                <span>ALL PAGES</span>
-                <span>INTEGRATION</span>
-                <span>PRICING</span>
+                <span>CATÁLOGO</span>
+                <span>CARRITO</span>
+                <span>PAGOS</span>
               </div>
-              <span class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono">BOOK A FREE DEMO</span>
+              <a href="https://proyecto-2-gemetro-didier-c6ni.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
+                VER DEMO ↗
+              </a>
             </div>
             <!-- Simulated Hero Copy -->
-            <div class="my-auto text-center py-4">
-              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">Real world solutions. Simplified.</span>
-              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Elevate Your Business with CloudPeak</h4>
-              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Empowering Your Success with Cutting-Edge SaaS Solutions Built for Scalability.</p>
-              <button class="mt-3 px-3 py-1 rounded-full bg-brand-600 text-[10px] text-white font-medium hover:bg-brand-500 transition-colors">Get Started Now</button>
+            <div class="my-auto text-center py-3">
+              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">E-Commerce Full Stack •
+                Mercado Pago</span>
+              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Tienda River Oficial
+              </h4>
+              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Next.js &amp; PostgreSQL • Checkout Pro •
+                Panel Admin</p>
+              <div
+                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
+                Demo: invitado@gmail.com | 12345678
+              </div>
             </div>
-            <div class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center px-2 text-[9px] text-purple-400 font-mono">
-              Welcome to your CloudPeak Dashboard
+            <div
+              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
+              <span>PostgreSQL • NextAuth • Tailwind CSS</span>
+              <span class="text-emerald-400">● Online</span>
             </div>
           </div>
           <!-- Bottom Card Caption Overlay Badge -->
-          <div class="glass-badge rounded-2xl p-5 mt-5">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30 mb-2">
-              SaaS Landing Page
-            </span>
-            <h3 class="text-lg font-bold font-display text-white tracking-tight">Integrate AI Into The E-Commerce</h3>
-            <p class="text-xs text-purple-200/70 mt-1">
-              Landing Pages are designed for efficient and fast setup sales platform.
-            </p>
+          <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30"
+                  data-i18n="p1.badge">
+                  Proyecto Principal
+                </span>
+                <span class="text-[11px] font-mono text-purple-400/80">Next.js • PostgreSQL</span>
+              </div>
+              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="p1.title">Tienda River
+                (E-Commerce Full Stack)</h3>
+              <p class="text-xs text-purple-200/70 mt-2 leading-relaxed" data-i18n="p1.desc">
+                Plataforma de comercio electrónico con Next.js y PostgreSQL. Incorpora pasarela de pagos con Mercado
+                Pago (Checkout Pro), catálogo dinámico, carrito de compras reactivo, autenticación segura y panel
+                administrativo.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-300/60" data-i18n="p1.demoCreds">Demo: invitado@gmail.com |
+                12345678</span>
+              <a href="https://proyecto-2-gemetro-didier-c6ni.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 hover:text-white transition-colors"
+                data-i18n="projects.viewBtn">
+                <span>Ver Proyecto</span> &rarr;
+              </a>
+            </div>
           </div>
         </article>
-        <!-- Showcase Card 2 -->
+
+        <!-- Showcase Card 2: Predictor Mundial -->
         <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
           <!-- Web Mockup Preview with Violet Backdrop -->
-          <div class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
-            <div class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
-              <span class="font-bold text-white font-display">NovaPulse</span>
+          <div
+            class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
+            <div
+              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
+              <span class="font-bold text-white font-display">Predictor Mundial</span>
               <div class="hidden sm:flex gap-3 text-[10px] font-mono">
-                <span>SOLUTIONS</span>
-                <span>ANALYTICS</span>
-                <span>DOCS</span>
+                <span>22 COPAS</span>
+                <span>H2H</span>
+                <span>GOLES</span>
               </div>
-              <span class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono">EXPLORE</span>
+              <a href="https://predictor-de-mundiales-plataforma-f.vercel.app/" target="_blank"
+                rel="noopener noreferrer"
+                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
+                VER DEMO ↗
+              </a>
             </div>
-            <div class="my-auto text-center py-4">
-              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">Hyper-Performance Engine</span>
-              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Streamline Workflows with Zero Latency</h4>
-              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Next-gen distributed infrastructure crafted for enterprise design speed.</p>
-              <button class="mt-3 px-3 py-1 rounded-full bg-brand-600 text-[10px] text-white font-medium hover:bg-brand-500 transition-colors">Request Access</button>
+            <div class="my-auto text-center py-3">
+              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">Análisis Predictivo •
+                1930-2022</span>
+              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Predictor &amp;
+                Head-to-Head</h4>
+              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">FastAPI REST Backend • Next.js 14 • Charts
+                Dinámicos</p>
+              <div
+                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
+                22 Copas del Mundo Procesadas
+              </div>
             </div>
-            <div class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center px-2 text-[9px] text-purple-400 font-mono">
-              Live Clusters: 99.99% Uptime across 14 Regions
+            <div
+              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
+              <span>FastAPI • Python 3 • Chakra UI</span>
+              <span class="text-emerald-400">● Online</span>
             </div>
           </div>
           <!-- Bottom Card Caption Overlay Badge -->
-          <div class="glass-badge rounded-2xl p-5 mt-5">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30 mb-2">
-              SaaS Landing Page
-            </span>
-            <h3 class="text-lg font-bold font-display text-white tracking-tight">Integrate AI Into The E-Commerce</h3>
-            <p class="text-xs text-purple-200/70 mt-1">
-              Landing Pages are designed for efficient and fast setup sales platform.
-            </p>
+          <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30"
+                  data-i18n="p2.badge">
+                  Análisis Predictivo Deportivo
+                </span>
+                <span class="text-[11px] font-mono text-purple-400/80">FastAPI • Next.js 14</span>
+              </div>
+              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="p2.title">Predictor
+                Mundial (Análisis Predictivo &amp; H2H)</h3>
+              <p class="text-xs text-purple-200/70 mt-2 leading-relaxed" data-i18n="p2.desc">
+                Plataforma analítica deportiva basada en el procesamiento de 22 Copas del Mundo (1930-2022). Incluye API
+                REST modular con FastAPI y visualizaciones interactivas de rendimiento, momentum y distribución de
+                goles.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-300/60">Python 3 • TypeScript • Framer</span>
+              <a href="https://predictor-de-mundiales-plataforma-f.vercel.app/" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 hover:text-white transition-colors"
+                data-i18n="projects.viewBtn">
+                <span>Ver Proyecto</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Showcase Card 3: Previa App -->
+        <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
+          <!-- Web Mockup Preview with Violet Backdrop -->
+          <div
+            class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
+            <div
+              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
+              <span class="font-bold text-white font-display">Previa App</span>
+              <div class="hidden sm:flex gap-3 text-[10px] font-mono">
+                <span>SALAS</span>
+                <span>QR SYNC</span>
+                <span>OFFLINE</span>
+              </div>
+              <a href="https://junta-amigos-app.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
+                VER DEMO ↗
+              </a>
+            </div>
+            <div class="my-auto text-center py-3">
+              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">PWA • Realtime
+                Multiplayer</span>
+              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Previa App</h4>
+              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Firebase Realtime DB • Sincronización QR •
+                Soporte Offline</p>
+              <div
+                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
+                Next.js 16 • React 19 • PWA
+              </div>
+            </div>
+            <div
+              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
+              <span>TypeScript • Firebase • Tailwind CSS</span>
+              <span class="text-emerald-400">● Online</span>
+            </div>
+          </div>
+          <!-- Bottom Card Caption Overlay Badge -->
+          <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30"
+                  data-i18n="p3.badge">
+                  PWA &amp; Multijugador Realtime
+                </span>
+                <span class="text-[11px] font-mono text-purple-400/80">Next.js 16 • Firebase</span>
+              </div>
+              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="p3.title">Previa App (PWA
+                &amp; Multijugador en Tiempo Real)</h3>
+              <p class="text-xs text-purple-200/70 mt-2 leading-relaxed" data-i18n="p3.desc">
+                Progressive Web App interactiva para reuniones sociales con sincronización en tiempo real vía Firebase
+                Realtime Database, emparejamiento por código QR y soporte offline.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-300/60">React 19 • PWA • Offline</span>
+              <a href="https://junta-amigos-app.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 hover:text-white transition-colors"
+                data-i18n="projects.viewBtn">
+                <span>Ver Proyecto</span> &rarr;
+              </a>
+            </div>
           </div>
         </article>
       </div>
@@ -654,9 +955,11 @@
     <section class="py-24 px-6 lg:px-12 max-w-6xl mx-auto" data-purpose="process-section" id="process">
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">Process</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          A clear workflow drives each project—from strategy and design to development and post-launch support.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="process.title">
+          Metodología de Trabajo</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="process.subtitle">
+          Un flujo de trabajo claro impulsa cada proyecto: desde el análisis y la arquitectura de datos hasta la
+          implementación, pruebas y despliegue.
         </p>
       </div>
       <!-- 3 Numbered Process Steps -->
@@ -664,48 +967,59 @@
         <!-- Step 01 -->
         <div class="glass-panel rounded-3xl p-8 relative overflow-hidden group shadow-violet-card">
           <!-- Giant Background Watermark Number in Violet -->
-          <span class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
+          <span
+            class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
             01
           </span>
           <div class="relative z-10 pt-20">
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">Define &amp; Architect</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Define goals, map systems, and set the foundation for scalable code.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="process.s1Title">
+              Definir &amp; Arquitectar</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="process.s1Desc">
+              Analizar requerimientos, modelar entidades de bases de datos y diseñar una arquitectura modular y
+              escalable.
             </p>
           </div>
         </div>
         <!-- Step 02 -->
         <div class="glass-panel rounded-3xl p-8 relative overflow-hidden group shadow-violet-card">
-          <span class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
+          <span
+            class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
             02
           </span>
           <div class="relative z-10 pt-20">
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">Build &amp; Develop</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Write clean, modular code with seamless UI and robust APIs.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="process.s2Title">
+              Construir &amp; Desarrollar</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="process.s2Desc">
+              Escribir código limpio y tipado, integrando interfaces modernas y reactivas con APIs y bases de datos
+              robustas.
             </p>
           </div>
         </div>
         <!-- Step 03 -->
         <div class="glass-panel rounded-3xl p-8 relative overflow-hidden group shadow-violet-card">
-          <span class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
+          <span
+            class="text-8xl sm:text-9xl font-bold font-display text-brand-600/25 absolute -top-4 -left-2 select-none group-hover:text-brand-500/35 transition-colors">
             03
           </span>
           <div class="relative z-10 pt-20">
-            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight">Deploy &amp; Support</h3>
-            <p class="text-sm text-purple-200/70 leading-relaxed">
-              Deploy, monitor, and optimize to keep products fast and reliable.
+            <h3 class="text-xl font-bold font-display text-white mb-2 tracking-tight" data-i18n="process.s3Title">
+              Desplegar &amp; Optimizar</h3>
+            <p class="text-sm text-purple-200/70 leading-relaxed" data-i18n="process.s3Desc">
+              Implementar CI/CD, monitorear rendimiento, verificar seguridad y asegurar una experiencia de usuario
+              fluida.
             </p>
           </div>
         </div>
       </div>
       <!-- Process Bottom CTA Banner -->
-      <div class="mt-8 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-violet-glow">
-        <p class="text-lg sm:text-xl font-medium text-white text-center sm:text-left">
-          Build reliable, user-focused products with expert code.
+      <div
+        class="mt-8 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-violet-glow">
+        <p class="text-lg sm:text-xl font-medium text-white text-center sm:text-left" data-i18n="process.bannerText">
+          Construyendo software robusto, analítico y centrado en las necesidades del usuario.
         </p>
-        <a class="px-8 py-3 rounded-full text-sm font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn flex-shrink-0 transition-all duration-200" href="#contact">
-          Book a call
+        <a class="px-8 py-3 rounded-full text-sm font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn flex-shrink-0 transition-all duration-200"
+          href="#contact" data-i18n="process.bannerBtn">
+          Contactar
         </a>
       </div>
     </section>
@@ -715,71 +1029,108 @@
     <section class="py-24 px-6 lg:px-12 max-w-4xl mx-auto" data-purpose="faqs-accordion-section" id="faqs">
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight">Frequently Asked Questions</h2>
-        <p class="mt-3 text-base text-purple-200/70">
-          Answers to common questions about my work and process.
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white tracking-tight" data-i18n="faqs.title">
+          Preguntas Frecuentes</h2>
+        <p class="mt-3 text-base text-purple-200/70" data-i18n="faqs.subtitle">
+          Respuestas a preguntas habituales sobre mi perfil, stack técnico y disponibilidad.
         </p>
       </div>
       <!-- FAQ Accordion List -->
       <div class="space-y-4" id="faq-accordion-group">
         <!-- FAQ Item 1 (Open by default) -->
         <div class="glass-panel rounded-2xl p-6 border border-brand-500/40 transition-all duration-200">
-          <button class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none" onclick="toggleFaq(this)">
-            <span class="font-display tracking-tight">What kind of projects do you work on?</span>
-            <div class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
+          <button
+            class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none"
+            onclick="toggleFaq(this)">
+            <span class="font-display tracking-tight" data-i18n="faqs.q1">¿En qué tipo de proyectos te
+              especializas?</span>
+            <div
+              class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
               <span class="faq-icon text-lg leading-none">✕</span>
             </div>
           </button>
-          <div class="faq-content mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed">
-            I specialize in web development, cross-platform applications, and UI/UX solutions — from prototypes to production-ready products.
+          <div class="faq-content mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
+            data-i18n="faqs.a1">
+            Me especializo en desarrollo full stack: aplicaciones web con Next.js y React, APIs robustas en Python
+            (FastAPI) y Node.js, modelado de bases de datos relacionales en PostgreSQL y aplicaciones interactivas en
+            tiempo real (PWAs, Firebase).
           </div>
         </div>
         <!-- FAQ Item 2 -->
         <div class="glass-panel rounded-2xl p-6 border border-brand-500/20 transition-all duration-200">
-          <button class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none" onclick="toggleFaq(this)">
-            <span class="font-display tracking-tight">Do you take on freelance or full-time work?</span>
-            <div class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
+          <button
+            class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none"
+            onclick="toggleFaq(this)">
+            <span class="font-display tracking-tight" data-i18n="faqs.q2">¿Cuál es tu disponibilidad actual para
+              trabajar?</span>
+            <div
+              class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
               <span class="faq-icon text-lg leading-none">+</span>
             </div>
           </button>
-          <div class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed">
-            Yes, I take on selective freelance contracts, consulting engagements, and key full-time technical leadership positions that align with high product craft.
+          <div
+            class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
+            data-i18n="faqs.a2">
+            Estoy disponible para incorporarme a equipos de desarrollo como desarrollador Full Stack o Junior Developer,
+            proyectos freelance de alto impacto y pasantías tecnológicas, tanto de forma remota como híbrida.
           </div>
         </div>
         <!-- FAQ Item 3 -->
         <div class="glass-panel rounded-2xl p-6 border border-brand-500/20 transition-all duration-200">
-          <button class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none" onclick="toggleFaq(this)">
-            <span class="font-display tracking-tight">How do you approach new projects?</span>
-            <div class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
+          <button
+            class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none"
+            onclick="toggleFaq(this)">
+            <span class="font-display tracking-tight" data-i18n="faqs.q3">¿Cuál es tu formación académica y
+              trayectoria?</span>
+            <div
+              class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
               <span class="faq-icon text-lg leading-none">+</span>
             </div>
           </button>
-          <div class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed">
-            I start by dissecting product objectives and user needs, create clear technical architectures and interactive prototypes, and iterate rapidly through milestones.
+          <div
+            class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
+            data-i18n="faqs.a3">
+            Soy estudiante de 5º año de Ingeniería en Sistemas de Información en la Universidad Nacional del Sur (UNS),
+            fui ayudante de docencia en Bases de Datos y cuento con experiencia como desarrollador en Neufitech
+            (ecosistema SAI).
           </div>
         </div>
         <!-- FAQ Item 4 -->
         <div class="glass-panel rounded-2xl p-6 border border-brand-500/20 transition-all duration-200">
-          <button class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none" onclick="toggleFaq(this)">
-            <span class="font-display tracking-tight">What's your typical project timeline?</span>
-            <div class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
+          <button
+            class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none"
+            onclick="toggleFaq(this)">
+            <span class="font-display tracking-tight" data-i18n="faqs.q4">¿Cuáles son tus proyectos más
+              representativos?</span>
+            <div
+              class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
               <span class="faq-icon text-lg leading-none">+</span>
             </div>
           </button>
-          <div class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed">
-            Most scoped MVPs and web projects range from 2 to 6 weeks, while larger full-scale software builds are delivered over quarterly agile sprints.
+          <div
+            class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
+            data-i18n="faqs.a4">
+            Entre mis proyectos principales destacan 'Tienda River' (e-commerce con pagos Mercado Pago y PostgreSQL),
+            'Predictor Mundial' (plataforma analítica deportiva con FastAPI y Next.js) y 'Previa App' (PWA multijugador
+            con Firebase).
           </div>
         </div>
         <!-- FAQ Item 5 -->
         <div class="glass-panel rounded-2xl p-6 border border-brand-500/20 transition-all duration-200">
-          <button class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none" onclick="toggleFaq(this)">
-            <span class="font-display tracking-tight">How can we get started?</span>
-            <div class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
+          <button
+            class="w-full flex items-center justify-between text-left gap-4 font-semibold text-white text-base sm:text-lg focus:outline-none"
+            onclick="toggleFaq(this)">
+            <span class="font-display tracking-tight" data-i18n="faqs.q5">¿Cómo podemos ponernos en contacto?</span>
+            <div
+              class="w-9 h-9 rounded-full bg-brand-950 border border-brand-400/40 flex items-center justify-center flex-shrink-0 text-brand-300 font-mono">
               <span class="faq-icon text-lg leading-none">+</span>
             </div>
           </button>
-          <div class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed">
-            Simply schedule an introductory 20-minute call via the button above, or submit your project inquiry via the contact section below.
+          <div
+            class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
+            data-i18n="faqs.a5">
+            Puedes contactarme directamente por correo a gemetrov@gmail.com, por teléfono al (+54) 2932-404925, o
+            conectando a través de mi perfil de LinkedIn (https://www.linkedin.com/in/valentin-gemetro-59808a332).
           </div>
         </div>
       </div>
@@ -788,22 +1139,56 @@
 
     <!-- BEGIN: ContactSection -->
     <section class="py-20 px-6 lg:px-12 max-w-4xl mx-auto" data-purpose="contact-section" id="contact">
-      <div class="glass-panel rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-violet-glow border border-brand-500/35">
+      <div
+        class="glass-panel rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-violet-glow border border-brand-500/35">
         <div class="ambient-violet-orb top-[-50%] left-[20%] w-[400px] h-[400px] bg-brand-600/30"></div>
-        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/90 border border-brand-500/40 mb-4">
-          Ready to Collaborate?
+        <span
+          class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/90 border border-brand-500/40 mb-4"
+          data-i18n="contact.tag">
+          ¿Listo para colaborar?
         </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-display text-white tracking-tight">Let's build something phenomenal.</h2>
-        <p class="text-base text-purple-200/70 max-w-lg mx-auto mt-4 mb-8">
-          Have an idea or need full-cycle architecture &amp; development? Let's discuss requirements and kick off your next vision.
+        <h2 class="text-3xl sm:text-5xl font-bold font-display text-white tracking-tight" data-i18n="contact.title">
+          Construyamos algo fenomenal juntos.
+        </h2>
+        <p class="text-base text-purple-200/70 max-w-lg mx-auto mt-4 mb-8" data-i18n="contact.desc">
+          ¿Tienes una propuesta, proyecto o vacante? Conversemos sobre cómo puedo aportar valor técnico, ingeniería
+          sólida y resultados concretos.
         </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a class="px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn hover:shadow-violet-glow transition-all" href="mailto:leo@carter.design">
-            leo@carter.design
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
+          <!-- Email Button -->
+          <a class="px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-violet-btn hover:shadow-violet-glow transition-all flex items-center gap-2"
+            href="mailto:gemetrov@gmail.com">
+            <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewbox="0 0 24 24">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span data-i18n="contact.emailBtn">gemetrov@gmail.com</span>
           </a>
-          <a class="px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider text-purple-200 glass-badge hover:bg-white/10 transition-all" href="#">
-            Schedule on Calendly
+          <!-- LinkedIn Button -->
+          <a class="px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider text-purple-200 glass-badge hover:bg-white/10 transition-all flex items-center gap-2"
+            href="https://www.linkedin.com/in/valentin-gemetro-59808a332" target="_blank" rel="noopener noreferrer">
+            <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+              </path>
+            </svg>
+            <span data-i18n="contact.linkedinBtn">Perfil de LinkedIn</span>
           </a>
+          <!-- GitHub Button -->
+          <a class="px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider text-purple-200 glass-badge hover:bg-white/10 transition-all flex items-center gap-2"
+            href="https://github.com/ValenSecundaria" target="_blank" rel="noopener noreferrer">
+            <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+              </path>
+            </svg>
+            <span data-i18n="contact.githubBtn">Perfil de GitHub</span>
+          </a>
+        </div>
+        <!-- Location and Phone Details -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-purple-300/70 font-mono">
+          <span>📍 Bahía Blanca / Punta Alta, Buenos Aires, Argentina</span>
+          <span>📞 (+54) 2932-404925</span>
         </div>
       </div>
     </section>
@@ -811,21 +1196,24 @@
   </main>
 
   <!-- BEGIN: MainFooter -->
-  <footer class="border-t border-purple-900/30 py-12 px-6 lg:px-12 mt-12 bg-[#060309] relative z-10" data-purpose="main-footer">
+  <footer class="border-t border-purple-900/30 py-12 px-6 lg:px-12 mt-12 bg-[#060309] relative z-10"
+    data-purpose="main-footer">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <!-- Brand & Copyright -->
       <div class="flex items-center gap-3">
         <span class="w-2.5 h-2.5 rounded-full bg-brand-400"></span>
-        <span class="font-display font-bold text-white tracking-wider">LEO CARTER</span>
-        <span class="text-xs text-purple-300/50 ml-2">© 2025 Leo Carter. All rights reserved.</span>
+        <span class="font-display font-bold text-white tracking-wider" data-i18n="footer.brand">VALENTÍN GEMETRO</span>
+        <span class="text-xs text-purple-300/50 ml-2" data-i18n="footer.rights">© 2026 Valentín Gemetro. Todos los
+          derechos reservados.</span>
       </div>
       <!-- Quick Links -->
       <div class="flex items-center gap-6 text-xs text-purple-200/70 font-medium">
-        <a class="hover:text-brand-300 transition-colors" href="#hero">Home</a>
-        <a class="hover:text-brand-300 transition-colors" href="#services">Services</a>
-        <a class="hover:text-brand-300 transition-colors" href="#projects">Projects</a>
-        <a class="hover:text-brand-300 transition-colors" href="#experience">Experience</a>
-        <a class="hover:text-brand-300 transition-colors" href="#faqs">FAQs</a>
+        <a class="hover:text-brand-300 transition-colors" href="#hero" data-i18n="footer.home">Inicio</a>
+        <a class="hover:text-brand-300 transition-colors" href="#services" data-i18n="footer.services">Servicios</a>
+        <a class="hover:text-brand-300 transition-colors" href="#projects" data-i18n="footer.projects">Proyectos</a>
+        <a class="hover:text-brand-300 transition-colors" href="#experience"
+          data-i18n="footer.experience">Trayectoria</a>
+        <a class="hover:text-brand-300 transition-colors" href="#faqs" data-i18n="footer.faqs">Preguntas</a>
       </div>
       <!-- Violet Glow Accent Indicator -->
       <div class="text-xs text-purple-400/80 font-mono flex items-center gap-2">
@@ -839,61 +1227,61 @@
   <!-- BEGIN: InteractiveScripts -->
   <!-- Cursor & Click Effect Handler -->
   <script data-purpose="custom-cursor-and-click-animations">
-    (function initInteractiveCursor() {
-      // Respect accessibility preferences
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        return;
-      }
+      (function initInteractiveCursor() {
+        // Respect accessibility preferences
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
 
-      const dot = document.getElementById('cursor-dot');
-      const ring = document.getElementById('cursor-ring');
-      if (!dot || !ring) return;
+        const dot = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-ring');
+        if (!dot || !ring) return;
 
-      let mouseX = window.innerWidth / 2;
-      let mouseY = window.innerHeight / 2;
-      let ringX = mouseX;
-      let ringY = mouseY;
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
 
-      // Mouse Movement
-      window.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        dot.style.left = `${mouseX}px`;
-        dot.style.top = `${mouseY}px`;
-      });
+        // Mouse Movement
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+        });
 
-      // Smooth lag animation for outer ring
-      function animateRing() {
-        ringX += (mouseX - ringX) * 0.16;
-        ringY += (mouseY - ringY) * 0.16;
-        ring.style.left = `${ringX}px`;
-        ring.style.top = `${ringY}px`;
+        // Smooth lag animation for outer ring
+        function animateRing() {
+          ringX += (mouseX - ringX) * 0.16;
+          ringY += (mouseY - ringY) * 0.16;
+          ring.style.left = `${ringX}px`;
+          ring.style.top = `${ringY}px`;
+          requestAnimationFrame(animateRing);
+        }
         requestAnimationFrame(animateRing);
-      }
-      requestAnimationFrame(animateRing);
 
-      // Ripple Click Effect in Violet
-      window.addEventListener('mousedown', (e) => {
-        const ripple = document.createElement('div');
-        ripple.className = 'click-ripple';
-        ripple.style.width = '36px';
-        ripple.style.height = '36px';
-        ripple.style.left = `${e.clientX}px`;
-        ripple.style.top = `${e.clientY}px`;
-        document.body.appendChild(ripple);
+        // Ripple Click Effect in Violet
+        window.addEventListener('mousedown', (e) => {
+          const ripple = document.createElement('div');
+          ripple.className = 'click-ripple';
+          ripple.style.width = '36px';
+          ripple.style.height = '36px';
+          ripple.style.left = `${e.clientX}px`;
+          ripple.style.top = `${e.clientY}px`;
+          document.body.appendChild(ripple);
 
-        setTimeout(() => {
-          ripple.remove();
-        }, 550);
-      });
+          setTimeout(() => {
+            ripple.remove();
+          }, 550);
+        });
 
-      // Interactive Elements Hover Scaling
-      const interactives = document.querySelectorAll('a, button, [role="button"], input, textarea');
-      interactives.forEach((el) => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-      });
-    })();
+        // Interactive Elements Hover Scaling
+        const interactives = document.querySelectorAll('a, button, [role="button"], input, textarea');
+        interactives.forEach((el) => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      })();
   </script>
 
   <!-- FAQ Accordion Logic -->
@@ -916,6 +1304,323 @@
       }
     }
   </script>
+
+  <!-- Internationalization (i18n) Engine -->
+  <script data-purpose="i18n-engine">
+    const translations = {
+      es: {
+        "page.title": "Valentín Gemetro — Desarrollador Full Stack & Estudiante de Ingeniería en Sistemas",
+        "nav.brand": "VALENTÍN GEMETRO",
+        "nav.projects": "Proyectos",
+        "nav.services": "Servicios",
+        "nav.experience": "Trayectoria",
+        "nav.process": "Proceso",
+        "nav.faqs": "Preguntas",
+        "nav.cta": "Contactar",
+        "hero.available": "Disponible para nuevos desafíos",
+        "hero.title": "¡Hola! Soy Valentín Gemetro, <br class=\"hidden sm:block\"/>construyendo <span class=\"italic font-display font-light text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-purple-200 block sm:inline mt-1 sm:mt-0\">Experiencias Digitales.</span>",
+        "hero.subtitle": "Estudiante Avanzado de Ingeniería en Sistemas de Información (UNS, 5º año) | Desarrollador Full Stack. Transformo ideas en productos escalables, de impacto real y centrados en el usuario.",
+        "hero.btnConnect": "Contactar",
+        "hero.btnWork": "Ver Proyectos",
+        "hero.stat1Val": "5º Año",
+        "hero.stat1Label": "Ing. en Sistemas (UNS)",
+        "hero.stat2Val": "Full Stack",
+        "hero.stat2Label": "Next.js • Python • PostgreSQL",
+        "hero.stat3Val": "3+",
+        "hero.stat3Label": "Proyectos Principales",
+        "hero.stat4Val": "UNS & Neufitech",
+        "hero.stat4Label": "Trayectoria & Docencia",
+        "about.title": "Sobre Mí",
+        "about.subtitle": "Construyo soluciones de software intuitivas, escalables y de alto rendimiento mediante ingeniería sólida y trabajo en equipo.",
+        "about.cardAvailable": "Disponible para trabajar",
+        "about.cardName": "VALENTÍN GEMETRO",
+        "about.cardRole": "Estudiante Avanzado de Ingeniería en Sistemas (UNS, 5º año) | Desarrollador Full Stack",
+        "about.cardLocation": "Bahía Blanca / Punta Alta, Buenos Aires, Argentina",
+        "about.cardConnectBtn": "Contactar",
+        "about.bioHeading": "¡Hola! Soy Valentín Gemetro,",
+        "about.bioP1": "Estudiante avanzado de Ingeniería en Sistemas apasionado por la construcción de software y las nuevas tecnologías. Analítico, adaptable y enfocado en el desarrollo full stack y el trabajo en equipo para resolver problemas de impacto real.",
+        "about.bioP2": "Cuento con experiencia en unificación e integración de sistemas en Neufitech, asistencia académica en la cátedra de Bases de Datos de la UNS, y desarrollo de aplicaciones modernas con Next.js, Node.js, Python (FastAPI), PostgreSQL y arquitecturas en la nube.",
+        "about.techStackLabel": "Mi Stack Tecnológico:",
+        "about.highlightsTitle": "Destacados de Trayectoria",
+        "about.highlightsViewAll": "Ver Todo",
+        "about.h1Role": "Desarrollador Full Stack",
+        "about.h1Company": "Neufitech (Ecosistema SAI)",
+        "about.h1Date": "2026",
+        "about.h2Role": "Ayudante de Docencia — Base de Datos",
+        "about.h2Company": "Universidad Nacional del Sur (UNS)",
+        "about.h2Date": "UNS",
+        "experience.title": "Trayectoria y Educación",
+        "experience.subtitle": "Historial de desarrollo de software de impacto, asistencia académica universitaria y continua formación en ingeniería y ciberseguridad.",
+        "exp1.title": "Desarrollador Full Stack / Junior Developer",
+        "exp1.date": "Feb 2026 — Jun 2026",
+        "exp1.company": "Neufitech • Ecosistema SAI",
+        "exp1.desc": "Unificación e integración de sistemas heterogéneos dentro del ecosistema del SAI. Rediseño completo de interfaz orientado a optimizar la experiencia de usuario y rendimiento para pacientes.",
+        "exp2.title": "Ayudante de Docencia — Base de Datos",
+        "exp2.date": "UNS • Cátedra de Base de Datos",
+        "exp2.company": "Universidad Nacional del Sur (UNS)",
+        "exp2.desc": "Asistencia académica y práctica en sistemas de bases de datos relacionales, álgebra relacional y consultas SQL.",
+        "exp3.title": "Ingeniería en Sistemas de Información",
+        "exp3.date": "2022 — Presente (5º año)",
+        "exp3.company": "Universidad Nacional del Sur (UNS)",
+        "exp3.desc": "Estudiante avanzado de 5º año. Sólida base analítica y práctica en ingeniería de software, arquitectura de sistemas, algoritmia, redes y desarrollo orientado a proyectos.",
+        "exp4.title": "Educación & Certificaciones Avanzadas",
+        "exp4.date": "2025 — 2026",
+        "exp4.company": "IBM SkillsBuild • CACIC • Cátedras UNESCO",
+        "exp4.desc": "Certificación IBM SkillsBuild: Cybersecurity Fundamentals (Agosto 2026) • Curso Intensivo de Ciberseguridad con IA (CACIC, UNS, 2025) • Introducción a la Computación Cuántica (UNS & Univ. do Minho, 2025) • Desarrollo de Gobierno Digital (UNS & Univ. de Aveiro, 2025).",
+        "services.title": "Servicios & Habilidades",
+        "services.subtitle": "Desde interfaces dinámicas hasta arquitecturas backend e integraciones complejas, construyo productos robustos, escalables y centrados en el usuario.",
+        "services.s1Title": "Desarrollo Web Full Stack",
+        "services.s1Desc": "Construcción de aplicaciones web completas, reactivas y optimizadas para rendimiento y escalabilidad con Next.js, Node.js y PostgreSQL.",
+        "services.s2Title": "APIs & Servicios Backend",
+        "services.s2Desc": "Diseño de APIs REST modulares y de alto rendimiento con FastAPI (Python), integración de bases de datos relacionales y microservicios.",
+        "services.s3Title": "PWAs & Tiempo Real",
+        "services.s3Desc": "Desarrollo de Progressive Web Apps interactivas con sincronización de datos en tiempo real (Firebase), emparejamiento QR y soporte offline.",
+        "services.stat1Val": "5º Año",
+        "services.stat1Label": "Ing. en Sistemas (UNS)",
+        "services.stat2Val": "3+",
+        "services.stat2Label": "Proyectos Principales",
+        "services.stat3Val": "Full Stack",
+        "services.stat3Label": "Next.js • Python • SQL",
+        "services.stat4Val": "UNS & Neufitech",
+        "services.stat4Label": "Experiencia & Docencia",
+        "projects.title": "Proyectos Destacados",
+        "projects.subtitle": "Una selección de aplicaciones en producción: comercio electrónico full stack, analítica predictiva de datos y plataformas interactivas en tiempo real.",
+        "projects.viewBtn": "Ver Proyecto",
+        "p1.badge": "Proyecto Principal",
+        "p1.title": "Tienda River (E-Commerce Full Stack)",
+        "p1.desc": "Plataforma de comercio electrónico con Next.js y PostgreSQL. Incorpora pasarela de pagos con Mercado Pago (Checkout Pro), catálogo dinámico, carrito de compras reactivo, autenticación segura y panel administrativo.",
+        "p1.demoCreds": "Demo: invitado@gmail.com | 12345678",
+        "p2.badge": "Análisis Predictivo Deportivo",
+        "p2.title": "Predictor Mundial (Análisis Predictivo & H2H)",
+        "p2.desc": "Plataforma analítica deportiva basada en el procesamiento de 22 Copas del Mundo (1930-2022). Incluye API REST modular con FastAPI y visualizaciones interactivas de rendimiento, momentum y distribución de goles.",
+        "p3.badge": "PWA & Multijugador Realtime",
+        "p3.title": "Previa App (PWA & Multijugador en Tiempo Real)",
+        "p3.desc": "Progressive Web App interactiva para reuniones sociales con sincronización en tiempo real vía Firebase Realtime Database, emparejamiento por código QR y soporte offline.",
+        "process.title": "Metodología de Trabajo",
+        "process.subtitle": "Un flujo de trabajo claro impulsa cada proyecto: desde el análisis y la arquitectura de datos hasta la implementación, pruebas y despliegue.",
+        "process.s1Title": "Definir & Arquitectar",
+        "process.s1Desc": "Analizar requerimientos, modelar entidades de bases de datos y diseñar una arquitectura modular y escalable.",
+        "process.s2Title": "Construir & Desarrollar",
+        "process.s2Desc": "Escribir código limpio y tipado, integrando interfaces modernas y reactivas con APIs y bases de datos robustas.",
+        "process.s3Title": "Desplegar & Optimizar",
+        "process.s3Desc": "Implementar CI/CD, monitorear rendimiento, verificar seguridad y asegurar una experiencia de usuario fluida.",
+        "process.bannerText": "Construyendo software robusto, analítico y centrado en las necesidades del usuario.",
+        "process.bannerBtn": "Contactar",
+        "faqs.title": "Preguntas Frecuentes",
+        "faqs.subtitle": "Respuestas a preguntas habituales sobre mi perfil, stack técnico y disponibilidad.",
+        "faqs.q1": "¿En qué tipo de proyectos te especializas?",
+        "faqs.a1": "Me especializo en desarrollo full stack: aplicaciones web con Next.js y React, APIs robustas en Python (FastAPI) y Node.js, modelado de bases de datos relacionales en PostgreSQL y aplicaciones interactivas en tiempo real (PWAs, Firebase).",
+        "faqs.q2": "¿Cuál es tu disponibilidad actual para trabajar?",
+        "faqs.a2": "Estoy disponible para incorporarme a equipos de desarrollo como desarrollador Full Stack o Junior Developer, proyectos freelance de alto impacto y pasantías tecnológicas, tanto de forma remota como híbrida.",
+        "faqs.q3": "¿Cuál es tu formación académica y trayectoria?",
+        "faqs.a3": "Soy estudiante de 5º año de Ingeniería en Sistemas de Información en la Universidad Nacional del Sur (UNS), fui ayudante de docencia en Bases de Datos y cuento con experiencia como desarrollador en Neufitech (ecosistema SAI).",
+        "faqs.q4": "¿Cuáles son tus proyectos más representativos?",
+        "faqs.a4": "Entre mis proyectos principales destacan 'Tienda River' (e-commerce con pagos Mercado Pago y PostgreSQL), 'Predictor Mundial' (plataforma analítica deportiva con FastAPI y Next.js) y 'Previa App' (PWA multijugador con Firebase).",
+        "faqs.q5": "¿Cómo podemos ponernos en contacto?",
+        "faqs.a5": "Puedes contactarme directamente por correo a gemetrov@gmail.com, por teléfono al (+54) 2932-404925, o conectando a través de mi perfil de LinkedIn (https://www.linkedin.com/in/valentin-gemetro-59808a332).",
+        "contact.tag": "¿Listo para colaborar?",
+        "contact.title": "Construyamos algo fenomenal juntos.",
+        "contact.desc": "¿Tienes una propuesta, proyecto o vacante? Conversemos sobre cómo puedo aportar valor técnico, ingeniería sólida y resultados concretos.",
+        "contact.emailBtn": "gemetrov@gmail.com",
+        "contact.linkedinBtn": "Perfil de LinkedIn",
+        "contact.githubBtn": "Perfil de GitHub",
+        "footer.brand": "VALENTÍN GEMETRO",
+        "footer.rights": "© 2026 Valentín Gemetro. Todos los derechos reservados.",
+        "footer.home": "Inicio",
+        "footer.services": "Servicios",
+        "footer.projects": "Proyectos",
+        "footer.experience": "Trayectoria",
+        "footer.faqs": "Preguntas"
+      },
+      en: {
+        "page.title": "Valentín Gemetro — Full Stack Developer & Systems Engineering Student",
+        "nav.brand": "VALENTÍN GEMETRO",
+        "nav.projects": "Projects",
+        "nav.services": "Services",
+        "nav.experience": "Experience",
+        "nav.process": "Process",
+        "nav.faqs": "FAQs",
+        "nav.cta": "Book a call",
+        "hero.available": "Available for new challenges",
+        "hero.title": "Hi! I'm Valentín Gemetro, <br class=\"hidden sm:block\"/>building <span class=\"italic font-display font-light text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-purple-200 block sm:inline mt-1 sm:mt-0\">Digital Experiences.</span>",
+        "hero.subtitle": "Advanced Information Systems Engineering student (UNS, 5th year) | Full Stack Developer. Turning ideas into scalable, real-world, user-focused products.",
+        "hero.btnConnect": "Let's Connect",
+        "hero.btnWork": "See My Work",
+        "hero.stat1Val": "5th Year",
+        "hero.stat1Label": "Systems Eng. (UNS)",
+        "hero.stat2Val": "Full Stack",
+        "hero.stat2Label": "Next.js • Python • PostgreSQL",
+        "hero.stat3Val": "3+",
+        "hero.stat3Label": "Main Projects",
+        "hero.stat4Val": "UNS & Neufitech",
+        "hero.stat4Label": "Experience & Academia",
+        "about.title": "About Me",
+        "about.subtitle": "I build intuitive, scalable, high-performing software solutions through solid engineering and teamwork.",
+        "about.cardAvailable": "Available for work",
+        "about.cardName": "VALENTÍN GEMETRO",
+        "about.cardRole": "Advanced Information Systems Engineering Student (UNS, 5th year) | Full Stack Developer",
+        "about.cardLocation": "Bahía Blanca / Punta Alta, Buenos Aires, Argentina",
+        "about.cardConnectBtn": "Let's Connect",
+        "about.bioHeading": "Hi! I'm Valentín Gemetro,",
+        "about.bioP1": "Advanced Information Systems Engineering student passionate about software construction and emerging technologies. Analytical, adaptable, and collaborative, focused on full stack development and delivering real-world solutions.",
+        "about.bioP2": "Experienced in system unification and integration at Neufitech, academic assistance in the Database department at UNS, and modern application development using Next.js, Node.js, Python (FastAPI), PostgreSQL, and cloud architectures.",
+        "about.techStackLabel": "My Tech Stack:",
+        "about.highlightsTitle": "Experience Highlights",
+        "about.highlightsViewAll": "View All",
+        "about.h1Role": "Full Stack Developer",
+        "about.h1Company": "Neufitech (SAI Ecosystem)",
+        "about.h1Date": "2026",
+        "about.h2Role": "Teaching Assistant — Databases",
+        "about.h2Company": "Universidad Nacional del Sur (UNS)",
+        "about.h2Date": "UNS",
+        "experience.title": "Work Experience & Education",
+        "experience.subtitle": "A track record of high-impact software engineering, university teaching assistance, and continuous education in engineering and cybersecurity.",
+        "exp1.title": "Full Stack Developer / Junior Developer",
+        "exp1.date": "Feb 2026 — Jun 2026",
+        "exp1.company": "Neufitech • SAI Ecosystem",
+        "exp1.desc": "Unification and integration of heterogeneous systems within the SAI ecosystem. Complete interface redesign focused on optimizing user experience and patient performance.",
+        "exp2.title": "Teaching Assistant — Database Systems",
+        "exp2.date": "UNS • Database Department",
+        "exp2.company": "Universidad Nacional del Sur (UNS)",
+        "exp2.desc": "Academic and practical assistance in relational database management systems, relational algebra, and SQL queries.",
+        "exp3.title": "Information Systems Engineering",
+        "exp3.date": "2022 — Present (5th year)",
+        "exp3.company": "Universidad Nacional del Sur (UNS)",
+        "exp3.desc": "5th-year advanced student. Solid analytical and practical foundation in software engineering, system architecture, algorithms, networking, and project-based development.",
+        "exp4.title": "Education & Advanced Certifications",
+        "exp4.date": "2025 — 2026",
+        "exp4.company": "IBM SkillsBuild • CACIC • UNESCO Chairs (UNS, U. Minho, U. Aveiro)",
+        "exp4.desc": "IBM SkillsBuild: Cybersecurity Fundamentals (August 2026) • AI Cybersecurity Intensive Course (CACIC, UNS, 2025) • Introduction to Quantum Computing (UNS & Univ. do Minho, 2025) • Digital Government Development (UNS & Univ. de Aveiro, 2025).",
+        "services.title": "Services & Skills",
+        "services.subtitle": "From dynamic interfaces to backend architectures and complex integrations, I build robust, scalable, user-focused products.",
+        "services.s1Title": "Full-Stack Web Development",
+        "services.s1Desc": "Building end-to-end web applications, responsive and optimized for speed and scalability using Next.js, Node.js, and PostgreSQL.",
+        "services.s2Title": "APIs & Backend Services",
+        "services.s2Desc": "Designing modular, high-performance REST APIs with FastAPI (Python), relational database integration, and microservices.",
+        "services.s3Title": "PWAs & Real-Time Applications",
+        "services.s3Desc": "Developing interactive Progressive Web Apps with real-time data sync (Firebase), QR pairing, and offline support.",
+        "services.stat1Val": "5th Year",
+        "services.stat1Label": "Systems Eng. (UNS)",
+        "services.stat2Val": "3+",
+        "services.stat2Label": "Main Projects",
+        "services.stat3Val": "Full Stack",
+        "services.stat3Label": "Next.js • Python • SQL",
+        "services.stat4Val": "UNS & Neufitech",
+        "services.stat4Label": "Experience & Academia",
+        "projects.title": "Featured Projects",
+        "projects.subtitle": "A curated mix of production projects: full-stack e-commerce, predictive data analytics, and interactive real-time platforms.",
+        "projects.viewBtn": "View Project",
+        "p1.badge": "Main Project",
+        "p1.title": "Tienda River (Full-Stack E-Commerce)",
+        "p1.desc": "Full-stack e-commerce application built with Next.js and PostgreSQL. Features Mercado Pago payment gateway (Checkout Pro), dynamic catalog, shopping cart, authentication, and an administrative dashboard.",
+        "p1.demoCreds": "Credentials: invitado@gmail.com | 12345678",
+        "p2.badge": "Sports Predictive Analytics",
+        "p2.title": "Predictor Mundial (Predictive Analytics & H2H)",
+        "p2.desc": "Sports predictive analytics platform processing historical data across 22 FIFA World Cups (1930–2022). High-performance FastAPI backend with dynamic Next.js visualization charts.",
+        "p3.badge": "PWA & Realtime Multiplayer",
+        "p3.title": "Previa App (Real-Time Multiplayer PWA)",
+        "p3.desc": "Real-time multiplayer Progressive Web App for party games with Firebase Realtime Database synchronization, QR pairing, and offline support.",
+        "process.title": "Process & Methodology",
+        "process.subtitle": "A clear workflow drives each project: from analysis and data architecture to implementation, testing, and deployment.",
+        "process.s1Title": "Define & Architect",
+        "process.s1Desc": "Analyze requirements, model database entities, and design a modular and scalable architecture.",
+        "process.s2Title": "Build & Develop",
+        "process.s2Desc": "Write clean, type-safe code, integrating modern reactive interfaces with robust APIs and databases.",
+        "process.s3Title": "Deploy & Optimize",
+        "process.s3Desc": "Deploy with CI/CD, monitor performance, verify security, and ensure a seamless user experience.",
+        "process.bannerText": "Building robust, analytical, user-centered software.",
+        "process.bannerBtn": "Book a call",
+        "faqs.title": "Frequently Asked Questions",
+        "faqs.subtitle": "Answers to common questions about my background, technical stack, and availability.",
+        "faqs.q1": "What kind of projects do you specialize in?",
+        "faqs.a1": "I specialize in full-stack development: web apps with Next.js and React, robust APIs in Python (FastAPI) and Node.js, relational database modeling in PostgreSQL, and real-time interactive apps (PWAs, Firebase).",
+        "faqs.q2": "What is your current availability for work?",
+        "faqs.a2": "I am available to join development teams as a Full Stack or Junior Developer, high-impact freelance projects, and tech internships, both remotely and hybrid.",
+        "faqs.q3": "What is your academic and professional background?",
+        "faqs.a3": "I am a 5th-year Information Systems Engineering student at Universidad Nacional del Sur (UNS), served as a Database Teaching Assistant, and have industry experience at Neufitech (SAI ecosystem).",
+        "faqs.q4": "What are your most representative projects?",
+        "faqs.a4": "My key projects include 'Tienda River' (e-commerce with Mercado Pago and PostgreSQL), 'Predictor Mundial' (sports analytics with FastAPI and Next.js), and 'Previa App' (multiplayer PWA with Firebase).",
+        "faqs.q5": "How can we get in touch?",
+        "faqs.a5": "You can reach me directly via email at gemetrov@gmail.com, phone at (+54) 2932-404925, or by connecting through LinkedIn (https://www.linkedin.com/in/valentin-gemetro-59808a332).",
+        "contact.tag": "Ready to Collaborate?",
+        "contact.title": "Let's build something phenomenal.",
+        "contact.desc": "Have a proposal, project, or role? Let's discuss how I can contribute technical value, solid engineering, and concrete results.",
+        "contact.emailBtn": "gemetrov@gmail.com",
+        "contact.linkedinBtn": "LinkedIn Profile",
+        "contact.githubBtn": "GitHub Profile",
+        "footer.brand": "VALENTÍN GEMETRO",
+        "footer.rights": "© 2026 Valentín Gemetro. All rights reserved.",
+        "footer.home": "Home",
+        "footer.services": "Services",
+        "footer.projects": "Projects",
+        "footer.experience": "Experience",
+        "footer.faqs": "FAQs"
+      }
+    };
+
+    function setLanguage(lang) {
+      if (!translations[lang]) lang = 'es';
+      localStorage.setItem('portfolio_lang', lang);
+      document.documentElement.lang = lang;
+
+      // Update button styling in header
+      const btnEs = document.getElementById('lang-btn-es');
+      const btnEn = document.getElementById('lang-btn-en');
+      if (btnEs && btnEn) {
+        if (lang === 'es') {
+          btnEs.classList.add('text-brand-300', 'font-bold');
+          btnEs.classList.remove('text-purple-400/60');
+          btnEn.classList.remove('text-brand-300', 'font-bold');
+          btnEn.classList.add('text-purple-400/60');
+        } else {
+          btnEn.classList.add('text-brand-300', 'font-bold');
+          btnEn.classList.remove('text-purple-400/60');
+          btnEs.classList.remove('text-brand-300', 'font-bold');
+          btnEs.classList.add('text-purple-400/60');
+        }
+      }
+
+      // Update document title
+      if (translations[lang]['page.title']) {
+        document.title = translations[lang]['page.title'];
+      }
+
+      // Translate all DOM elements tagged with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key] !== undefined) {
+          if (el.getAttribute('data-i18n-html') === 'true') {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+    }
+
+    // Toggle button event binding
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('lang-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const currentLang = localStorage.getItem('portfolio_lang') || 'es';
+          const nextLang = currentLang === 'es' ? 'en' : 'es';
+          setLanguage(nextLang);
+        });
+      }
+
+      // Initialize with saved language or default to Spanish ('es')
+      const initialLang = localStorage.getItem('portfolio_lang') || 'es';
+      setLanguage(initialLang);
+    });
+
+    // Immediate run in case DOM is already loaded
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      const initialLang = localStorage.getItem('portfolio_lang') || 'es';
+      setLanguage(initialLang);
+    }
+  </script>
   <!-- END: InteractiveScripts -->
 </body>
+
 </html>
