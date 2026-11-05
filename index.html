@@ -272,11 +272,7 @@
             <!-- Graphic Avatar Representation -->
             <div
               class="w-full h-full rounded-full overflow-hidden relative bg-[#130a21] flex items-center justify-center">
-              <svg class="w-4/5 h-4/5 text-brand-300/80 mt-10" fill="currentColor" viewbox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
-                </path>
-              </svg>
+              <img src="mi-foto.jpeg" alt="Valentín Gemetro" class="absolute inset-0 w-full h-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#08040d] via-transparent to-transparent opacity-80">
               </div>
             </div>
@@ -337,11 +333,8 @@
           <!-- Portrait Avatar Frame -->
           <div
             class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-b from-[#221038] to-[#120822] overflow-hidden relative border border-brand-500/25 flex items-center justify-center mb-6">
-            <svg class="w-2/3 h-2/3 text-brand-300/70" fill="currentColor" viewbox="0 0 24 24">
-              <path
-                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
-              </path>
-            </svg>
+            <img src="mi-foto.jpeg" alt="Valentín Gemetro"
+              class="absolute inset-0 w-full h-full object-cover object-top" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#150d22] via-transparent to-transparent"></div>
           </div>
           <!-- Availability Tag -->
@@ -471,6 +464,25 @@
                 data-i18n="about.highlightsViewAll">Ver Todo</a>
             </div>
             <div class="divide-y divide-purple-900/40 text-xs sm:text-sm">
+              <a href="https://gym-avefenix.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="py-2.5 flex justify-between items-center text-purple-200/90 hover:text-white group transition-colors">
+                <span
+                  class="font-medium text-white group-hover:text-brand-300 flex items-center gap-1.5 transition-colors">
+                  <span data-i18n="about.hGymRole">Desarrollador Freelance</span>
+                  <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+                <span class="text-purple-300/60" data-i18n="about.hGymCompany">Gimnasio Avefenix</span>
+                <span class="font-mono text-purple-400" data-i18n="about.hGymDate">Web</span>
+              </a>
+              <div class="py-2.5 flex justify-between items-center text-purple-200/90">
+                <span class="font-medium text-white" data-i18n="about.hCsRole">Coordinador de Viaje</span>
+                <span class="text-purple-300/60" data-i18n="about.hCsCompany">CS Show</span>
+                <span class="font-mono text-purple-400" data-i18n="about.hCsDate">Staff</span>
+              </div>
               <div class="py-2.5 flex justify-between items-center text-purple-200/90">
                 <span class="font-medium text-white" data-i18n="about.h1Role">Desarrollador Full Stack</span>
                 <span class="text-purple-300/60" data-i18n="about.h1Company">Neufitech (Ecosistema SAI)</span>
@@ -525,6 +537,68 @@
               <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Ecosistema SAI</span>
               <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Integración de Sistemas</span>
               <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">UI/UX &amp; Performance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role: Desarrollo Freelance (Gimnasio Avefenix) -->
+        <div class="relative group">
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-[#08040d] shadow-[0_0_12px_#f59e0b] group-hover:scale-125 transition-transform">
+          </div>
+          <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div class="flex items-center gap-2">
+                <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="expGym.title">
+                  Desarrollador Freelance</h3>
+                <a href="https://gym-avefenix.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="text-brand-300 hover:text-white transition-colors" title="Ver sitio web">
+                  <svg class="w-4 h-4 opacity-70 hover:opacity-100 transition-opacity" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-amber-950/70 text-amber-300 border border-amber-500/30 w-fit"
+                data-i18n="expGym.date">Freelance • Producción</span>
+            </div>
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="expGym.company">Gimnasio Avefenix</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="expGym.desc">
+              Desarrollo full-stack independiente y puesta en producción de una plataforma integral de gestión y control de acceso: catálogo interactivo de membresías, módulo de check-in de socios en tiempo real y panel administrativo optimizado para dispositivos móviles.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Next.js</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Check-in Realtime</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">UI/UX Mobile First</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role: Coordinador de Viaje (CS Show) -->
+        <div class="relative group">
+          <div
+            class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-brand-400 border-4 border-[#08040d] shadow-[0_0_12px_#c084fc] group-hover:scale-125 transition-transform">
+          </div>
+          <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-violet-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg sm:text-xl font-bold font-display text-white tracking-tight" data-i18n="expCs.title">
+                Coordinador de Viajes</h3>
+              <span
+                class="text-xs font-semibold font-mono px-3 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-brand-500/20 w-fit"
+                data-i18n="expCs.date">Staff • Logística y Grupos</span>
+            </div>
+            <p class="text-sm font-medium text-brand-400 mb-3" data-i18n="expCs.company">CS Show</p>
+            <p class="text-sm text-purple-200/80 leading-relaxed mb-4" data-i18n="expCs.desc">
+              Coordinación operativa, liderazgo y gestión de contingentes en viajes y eventos grupales. Manejo y resolución de contingencias en tiempo real, comunicación asertiva con clientes y trabajo en equipo multidisciplinario bajo entornos dinámicos.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Liderazgo de Equipos</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Resolución de Problemas</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Gestión Logística</span>
+              <span class="px-2.5 py-1 rounded-md glass-badge text-purple-300 font-mono">Comunicación Asertiva</span>
             </div>
           </div>
         </div>
@@ -745,45 +819,18 @@
           plataformas interactivas en tiempo real.
         </p>
       </div>
-      <!-- Projects Showcase Grid: 3 Real Projects from AGENTS.md -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Projects Showcase Grid: Real Projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Showcase Card 1: Tienda River (Proyecto Principal) -->
         <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
           <!-- Web Mockup Preview with Violet Backdrop -->
           <div
             class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
-            <!-- Simulated Nav -->
-            <div
-              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
-              <span class="font-bold text-white font-display">Tienda River</span>
-              <div class="hidden sm:flex gap-3 text-[10px] font-mono">
-                <span>CATÁLOGO</span>
-                <span>CARRITO</span>
-                <span>PAGOS</span>
-              </div>
-              <a href="https://proyecto-2-gemetro-didier-c6ni.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
-                VER DEMO ↗
-              </a>
-            </div>
-            <!-- Simulated Hero Copy -->
-            <div class="my-auto text-center py-3">
-              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">E-Commerce Full Stack •
-                Mercado Pago</span>
-              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Tienda River Oficial
-              </h4>
-              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Next.js &amp; PostgreSQL • Checkout Pro •
-                Panel Admin</p>
-              <div
-                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
-                Demo: invitado@gmail.com | 12345678
-              </div>
-            </div>
-            <div
-              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
-              <span>PostgreSQL • NextAuth • Tailwind CSS</span>
-              <span class="text-emerald-400">● Online</span>
-            </div>
+            <a href="https://proyecto-2-gemetro-didier-c6ni.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="absolute inset-0 block">
+              <img src="River.png" alt="Captura de Tienda River" loading="lazy"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+            </a>
           </div>
           <!-- Bottom Card Caption Overlay Badge -->
           <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
@@ -816,42 +863,55 @@
           </div>
         </article>
 
-        <!-- Showcase Card 2: Predictor Mundial -->
+        <!-- Showcase Card: Gimnasio Ave Fénix (Desarrollador Freelance) -->
         <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
           <!-- Web Mockup Preview with Violet Backdrop -->
           <div
             class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
-            <div
-              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
-              <span class="font-bold text-white font-display">Predictor Mundial</span>
-              <div class="hidden sm:flex gap-3 text-[10px] font-mono">
-                <span>22 COPAS</span>
-                <span>H2H</span>
-                <span>GOLES</span>
+            <a href="https://gym-avefenix.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="absolute inset-0 block flex items-center justify-center bg-[#09040e]">
+              <img src="avefenix.jpeg" alt="Gimnasio Ave Fénix" loading="lazy"
+                class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+            </a>
+          </div>
+          <!-- Bottom Card Caption Overlay Badge -->
+          <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-amber-300 bg-amber-950/60 border border-amber-500/30"
+                  data-i18n="pGym.badge">
+                  Desarrollo Freelance
+                </span>
+                <span class="text-[11px] font-mono text-purple-400/80">Next.js • Tailwind CSS</span>
               </div>
-              <a href="https://predictor-de-mundiales-plataforma-f.vercel.app/" target="_blank"
-                rel="noopener noreferrer"
-                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
-                VER DEMO ↗
+              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="pGym.title">Gimnasio Ave Fénix
+                (Sistema de Gestión y Acceso)</h3>
+              <p class="text-xs text-purple-200/70 mt-2 leading-relaxed" data-i18n="pGym.desc">
+                Plataforma web integral para gimnasio y centro de entrenamiento de alto rendimiento: catálogo de planes y tarifas, terminal de check-in y control de acceso de socios en tiempo real, gestión de cuotas y diseño responsive optimizado.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-300/60">PWA • Check-In • Responsive</span>
+              <a href="https://gym-avefenix.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 hover:text-white transition-colors"
+                data-i18n="projects.viewBtn">
+                <span>Ver Proyecto</span> &rarr;
               </a>
             </div>
-            <div class="my-auto text-center py-3">
-              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">Análisis Predictivo •
-                1930-2022</span>
-              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Predictor &amp;
-                Head-to-Head</h4>
-              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">FastAPI REST Backend • Next.js 14 • Charts
-                Dinámicos</p>
-              <div
-                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
-                22 Copas del Mundo Procesadas
-              </div>
-            </div>
-            <div
-              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
-              <span>FastAPI • Python 3 • Chakra UI</span>
-              <span class="text-emerald-400">● Online</span>
-            </div>
+          </div>
+        </article>
+
+        <!-- Showcase Card 2: Casa-Cumpleaños (Punto Feliz) -->
+        <article class="glass-panel rounded-3xl p-6 overflow-hidden flex flex-col justify-between group">
+          <!-- Web Mockup Preview with Violet Backdrop -->
+          <div
+            class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
+            <a href="https://cumplea-os-xi-five.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="absolute inset-0 block">
+              <img src="cumpleanios.png" alt="Captura de Casa-Cumpleaños Punto Feliz" loading="lazy"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+            </a>
           </div>
           <!-- Bottom Card Caption Overlay Badge -->
           <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
@@ -860,22 +920,22 @@
                 <span
                   class="inline-block px-3 py-1 rounded-full text-xs font-semibold font-mono text-brand-300 bg-brand-950/80 border border-brand-500/30"
                   data-i18n="p2.badge">
-                  Análisis Predictivo Deportivo
+                  SaaS &amp; Gestión de Reservas
                 </span>
-                <span class="text-[11px] font-mono text-purple-400/80">FastAPI • Next.js 14</span>
+                <span class="text-[11px] font-mono text-purple-400/80">Next.js • Prisma</span>
               </div>
-              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="p2.title">Predictor
-                Mundial (Análisis Predictivo &amp; H2H)</h3>
+              <h3 class="text-lg font-bold font-display text-white tracking-tight" data-i18n="p2.title">Casa-Cumpleaños
+                (Punto Feliz — Gestión &amp; Tarjetas Digitales)</h3>
               <p class="text-xs text-purple-200/70 mt-2 leading-relaxed" data-i18n="p2.desc">
-                Plataforma analítica deportiva basada en el procesamiento de 22 Copas del Mundo (1930-2022). Incluye API
-                REST modular con FastAPI y visualizaciones interactivas de rendimiento, momentum y distribución de
-                goles.
+                Plataforma full stack para un salón de fiestas infantiles de Bahía Blanca: landing comercial con
+                conversión directa a WhatsApp, invitaciones digitales interactivas mobile-first (9:16) con editor en
+                tiempo real y cuenta regresiva, y panel administrativo con calendario de turnos, prevención de
+                doble reserva y control de señas.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between">
-              <span class="text-[11px] font-mono text-purple-300/60">Python 3 • TypeScript • Framer</span>
-              <a href="https://predictor-de-mundiales-plataforma-f.vercel.app/" target="_blank"
-                rel="noopener noreferrer"
+              <span class="text-[11px] font-mono text-purple-300/60">PostgreSQL • Supabase • Tailwind</span>
+              <a href="https://cumplea-os-xi-five.vercel.app/" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 hover:text-white transition-colors"
                 data-i18n="projects.viewBtn">
                 <span>Ver Proyecto</span> &rarr;
@@ -889,35 +949,11 @@
           <!-- Web Mockup Preview with Violet Backdrop -->
           <div
             class="w-full aspect-[16/10] rounded-2xl bg-gradient-to-b from-[#180a2b] to-[#0c0516] border border-brand-500/30 p-5 relative overflow-hidden flex flex-col justify-between">
-            <div
-              class="flex items-center justify-between text-[11px] text-purple-300/70 border-b border-purple-900/40 pb-3">
-              <span class="font-bold text-white font-display">Previa App</span>
-              <div class="hidden sm:flex gap-3 text-[10px] font-mono">
-                <span>SALAS</span>
-                <span>QR SYNC</span>
-                <span>OFFLINE</span>
-              </div>
-              <a href="https://junta-amigos-app.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="px-2 py-0.5 rounded-full bg-brand-600/30 border border-brand-500/40 text-[10px] text-brand-300 font-mono hover:bg-brand-600/60 transition-colors">
-                VER DEMO ↗
-              </a>
-            </div>
-            <div class="my-auto text-center py-3">
-              <span class="text-[10px] tracking-wider uppercase text-brand-400 font-mono">PWA • Realtime
-                Multiplayer</span>
-              <h4 class="text-lg sm:text-xl font-bold font-display text-white mt-1 tracking-tight">Previa App</h4>
-              <p class="text-[11px] text-purple-200/60 max-w-xs mx-auto mt-1">Firebase Realtime DB • Sincronización QR •
-                Soporte Offline</p>
-              <div
-                class="mt-2.5 inline-block px-2.5 py-1 rounded bg-brand-950/80 border border-brand-500/30 text-[10px] text-brand-300 font-mono">
-                Next.js 16 • React 19 • PWA
-              </div>
-            </div>
-            <div
-              class="h-6 w-full bg-[#110720]/80 rounded border border-purple-900/30 flex items-center justify-between px-2 text-[9px] text-purple-400 font-mono">
-              <span>TypeScript • Firebase • Tailwind CSS</span>
-              <span class="text-emerald-400">● Online</span>
-            </div>
+            <a href="https://junta-amigos-app.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="absolute inset-0 block">
+              <img src="Junta-amigos.png" alt="Captura de Previa App" loading="lazy"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+            </a>
           </div>
           <!-- Bottom Card Caption Overlay Badge -->
           <div class="glass-badge rounded-2xl p-5 mt-5 flex flex-col justify-between flex-1">
@@ -1111,8 +1147,8 @@
             class="faq-content hidden mt-4 pt-3 border-t border-purple-900/40 text-sm text-purple-200/80 leading-relaxed"
             data-i18n="faqs.a4">
             Entre mis proyectos principales destacan 'Tienda River' (e-commerce con pagos Mercado Pago y PostgreSQL),
-            'Predictor Mundial' (plataforma analítica deportiva con FastAPI y Next.js) y 'Previa App' (PWA multijugador
-            con Firebase).
+            'Casa-Cumpleaños' (SaaS de gestión de reservas e invitaciones digitales con Next.js y Prisma) y 'Previa App'
+            (PWA multijugador con Firebase).
           </div>
         </div>
         <!-- FAQ Item 5 -->
@@ -1343,6 +1379,12 @@
         "about.techStackLabel": "Mi Stack Tecnológico:",
         "about.highlightsTitle": "Destacados de Trayectoria",
         "about.highlightsViewAll": "Ver Todo",
+        "about.hGymRole": "Desarrollador Freelance",
+        "about.hGymCompany": "Gimnasio Avefenix",
+        "about.hGymDate": "Web",
+        "about.hCsRole": "Coordinador de Viaje",
+        "about.hCsCompany": "CS Show",
+        "about.hCsDate": "Staff",
         "about.h1Role": "Desarrollador Full Stack",
         "about.h1Company": "Neufitech (Ecosistema SAI)",
         "about.h1Date": "2026",
@@ -1355,6 +1397,14 @@
         "exp1.date": "Feb 2026 — Jun 2026",
         "exp1.company": "Neufitech • Ecosistema SAI",
         "exp1.desc": "Unificación e integración de sistemas heterogéneos dentro del ecosistema del SAI. Rediseño completo de interfaz orientado a optimizar la experiencia de usuario y rendimiento para pacientes.",
+        "expGym.title": "Desarrollador Freelance",
+        "expGym.date": "Freelance • Producción",
+        "expGym.company": "Gimnasio Avefenix",
+        "expGym.desc": "Desarrollo full-stack independiente y puesta en producción de una plataforma integral de gestión y control de acceso: catálogo interactivo de membresías, módulo de check-in de socios en tiempo real y panel administrativo optimizado para dispositivos móviles.",
+        "expCs.title": "Coordinador de Viajes",
+        "expCs.date": "Staff • Logística y Grupos",
+        "expCs.company": "CS Show",
+        "expCs.desc": "Coordinación operativa, liderazgo y gestión de contingentes en viajes y eventos grupales. Manejo y resolución de contingencias en tiempo real, comunicación asertiva con clientes y trabajo en equipo multidisciplinario bajo entornos dinámicos.",
         "exp2.title": "Ayudante de Docencia — Base de Datos",
         "exp2.date": "UNS • Cátedra de Base de Datos",
         "exp2.company": "Universidad Nacional del Sur (UNS)",
@@ -1384,15 +1434,18 @@
         "services.stat4Val": "UNS & Neufitech",
         "services.stat4Label": "Experiencia & Docencia",
         "projects.title": "Proyectos Destacados",
-        "projects.subtitle": "Una selección de aplicaciones en producción: comercio electrónico full stack, analítica predictiva de datos y plataformas interactivas en tiempo real.",
+        "projects.subtitle": "Una selección de aplicaciones en producción: comercio electrónico full stack, SaaS de gestión operativa y plataformas interactivas en tiempo real.",
         "projects.viewBtn": "Ver Proyecto",
         "p1.badge": "Proyecto Principal",
         "p1.title": "Tienda River (E-Commerce Full Stack)",
         "p1.desc": "Plataforma de comercio electrónico con Next.js y PostgreSQL. Incorpora pasarela de pagos con Mercado Pago (Checkout Pro), catálogo dinámico, carrito de compras reactivo, autenticación segura y panel administrativo.",
         "p1.demoCreds": "Demo: invitado@gmail.com | 12345678",
-        "p2.badge": "Análisis Predictivo Deportivo",
-        "p2.title": "Predictor Mundial (Análisis Predictivo & H2H)",
-        "p2.desc": "Plataforma analítica deportiva basada en el procesamiento de 22 Copas del Mundo (1930-2022). Incluye API REST modular con FastAPI y visualizaciones interactivas de rendimiento, momentum y distribución de goles.",
+        "pGym.badge": "Desarrollo Freelance",
+        "pGym.title": "Gimnasio Ave Fénix (Sistema de Gestión y Acceso)",
+        "pGym.desc": "Plataforma web integral para gimnasio y centro de entrenamiento de alto rendimiento: catálogo de planes y tarifas, terminal de check-in y control de acceso de socios en tiempo real, gestión de cuotas y diseño responsive optimizado.",
+        "p2.badge": "SaaS & Gestión de Reservas",
+        "p2.title": "Casa-Cumpleaños (Punto Feliz — Gestión & Tarjetas Digitales)",
+        "p2.desc": "Plataforma full stack para un salón de fiestas infantiles de Bahía Blanca: landing comercial con conversión directa a WhatsApp, invitaciones digitales interactivas mobile-first (9:16) con editor en tiempo real y cuenta regresiva, y panel administrativo con calendario de turnos, prevención de doble reserva y control de señas.",
         "p3.badge": "PWA & Multijugador Realtime",
         "p3.title": "Previa App (PWA & Multijugador en Tiempo Real)",
         "p3.desc": "Progressive Web App interactiva para reuniones sociales con sincronización en tiempo real vía Firebase Realtime Database, emparejamiento por código QR y soporte offline.",
@@ -1415,7 +1468,7 @@
         "faqs.q3": "¿Cuál es tu formación académica y trayectoria?",
         "faqs.a3": "Soy estudiante de 5º año de Ingeniería en Sistemas de Información en la Universidad Nacional del Sur (UNS), fui ayudante de docencia en Bases de Datos y cuento con experiencia como desarrollador en Neufitech (ecosistema SAI).",
         "faqs.q4": "¿Cuáles son tus proyectos más representativos?",
-        "faqs.a4": "Entre mis proyectos principales destacan 'Tienda River' (e-commerce con pagos Mercado Pago y PostgreSQL), 'Predictor Mundial' (plataforma analítica deportiva con FastAPI y Next.js) y 'Previa App' (PWA multijugador con Firebase).",
+        "faqs.a4": "Entre mis proyectos principales destacan 'Tienda River' (e-commerce con pagos Mercado Pago y PostgreSQL), 'Casa-Cumpleaños' (SaaS de gestión de reservas e invitaciones digitales con Next.js y Prisma) y 'Previa App' (PWA multijugador con Firebase).",
         "faqs.q5": "¿Cómo podemos ponernos en contacto?",
         "faqs.a5": "Puedes contactarme directamente por correo a gemetrov@gmail.com, por teléfono al (+54) 2932-404925, o conectando a través de mi perfil de LinkedIn (https://www.linkedin.com/in/valentin-gemetro-59808a332).",
         "contact.tag": "¿Listo para colaborar?",
@@ -1467,6 +1520,12 @@
         "about.techStackLabel": "My Tech Stack:",
         "about.highlightsTitle": "Experience Highlights",
         "about.highlightsViewAll": "View All",
+        "about.hGymRole": "Freelance Developer",
+        "about.hGymCompany": "Gimnasio Avefenix",
+        "about.hGymDate": "Web",
+        "about.hCsRole": "Travel Coordinator",
+        "about.hCsCompany": "CS Show",
+        "about.hCsDate": "Staff",
         "about.h1Role": "Full Stack Developer",
         "about.h1Company": "Neufitech (SAI Ecosystem)",
         "about.h1Date": "2026",
@@ -1479,6 +1538,14 @@
         "exp1.date": "Feb 2026 — Jun 2026",
         "exp1.company": "Neufitech • SAI Ecosystem",
         "exp1.desc": "Unification and integration of heterogeneous systems within the SAI ecosystem. Complete interface redesign focused on optimizing user experience and patient performance.",
+        "expGym.title": "Freelance Developer",
+        "expGym.date": "Freelance • Production",
+        "expGym.company": "Gimnasio Avefenix",
+        "expGym.desc": "Independent full-stack development and production deployment of an end-to-end gym management and access control platform: interactive membership catalog, real-time member check-in terminal, and mobile-optimized administration dashboard.",
+        "expCs.title": "Travel Coordinator",
+        "expCs.date": "Staff • Logistics & Group Management",
+        "expCs.company": "CS Show",
+        "expCs.desc": "Operational coordination, leadership, and group management during travel and group events. Real-time contingency problem-solving, assertive client communication, and multidisciplinary teamwork under dynamic environments.",
         "exp2.title": "Teaching Assistant — Database Systems",
         "exp2.date": "UNS • Database Department",
         "exp2.company": "Universidad Nacional del Sur (UNS)",
@@ -1508,15 +1575,18 @@
         "services.stat4Val": "UNS & Neufitech",
         "services.stat4Label": "Experience & Academia",
         "projects.title": "Featured Projects",
-        "projects.subtitle": "A curated mix of production projects: full-stack e-commerce, predictive data analytics, and interactive real-time platforms.",
+        "projects.subtitle": "A curated mix of production projects: full-stack e-commerce, operations management SaaS, and interactive real-time platforms.",
         "projects.viewBtn": "View Project",
         "p1.badge": "Main Project",
         "p1.title": "Tienda River (Full-Stack E-Commerce)",
         "p1.desc": "Full-stack e-commerce application built with Next.js and PostgreSQL. Features Mercado Pago payment gateway (Checkout Pro), dynamic catalog, shopping cart, authentication, and an administrative dashboard.",
         "p1.demoCreds": "Credentials: invitado@gmail.com | 12345678",
-        "p2.badge": "Sports Predictive Analytics",
-        "p2.title": "Predictor Mundial (Predictive Analytics & H2H)",
-        "p2.desc": "Sports predictive analytics platform processing historical data across 22 FIFA World Cups (1930–2022). High-performance FastAPI backend with dynamic Next.js visualization charts.",
+        "pGym.badge": "Freelance Development",
+        "pGym.title": "Ave Fénix Gym (Management & Access System)",
+        "pGym.desc": "Comprehensive web platform for high-performance training center: plans and memberships catalog, real-time member check-in & access control terminal, subscription management, and optimized responsive UI.",
+        "p2.badge": "SaaS & Booking Management",
+        "p2.title": "Casa-Cumpleaños (Punto Feliz — Management & Digital Invitations)",
+        "p2.desc": "Full-stack platform for a kids' party venue in Bahía Blanca: a commercial landing page with direct WhatsApp conversion, interactive mobile-first (9:16) digital invitations with a real-time editor and countdown, and an admin dashboard with a booking calendar, double-booking prevention, and deposit tracking.",
         "p3.badge": "PWA & Realtime Multiplayer",
         "p3.title": "Previa App (Real-Time Multiplayer PWA)",
         "p3.desc": "Real-time multiplayer Progressive Web App for party games with Firebase Realtime Database synchronization, QR pairing, and offline support.",
@@ -1539,7 +1609,7 @@
         "faqs.q3": "What is your academic and professional background?",
         "faqs.a3": "I am a 5th-year Information Systems Engineering student at Universidad Nacional del Sur (UNS), served as a Database Teaching Assistant, and have industry experience at Neufitech (SAI ecosystem).",
         "faqs.q4": "What are your most representative projects?",
-        "faqs.a4": "My key projects include 'Tienda River' (e-commerce with Mercado Pago and PostgreSQL), 'Predictor Mundial' (sports analytics with FastAPI and Next.js), and 'Previa App' (multiplayer PWA with Firebase).",
+        "faqs.a4": "My key projects include 'Tienda River' (e-commerce with Mercado Pago and PostgreSQL), 'Casa-Cumpleaños' (booking management and digital invitations SaaS with Next.js and Prisma), and 'Previa App' (multiplayer PWA with Firebase).",
         "faqs.q5": "How can we get in touch?",
         "faqs.a5": "You can reach me directly via email at gemetrov@gmail.com, phone at (+54) 2932-404925, or by connecting through LinkedIn (https://www.linkedin.com/in/valentin-gemetro-59808a332).",
         "contact.tag": "Ready to Collaborate?",
