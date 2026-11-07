@@ -205,7 +205,7 @@ Todos los enlaces externos que navegan hacia otros sitios incluyen los atributos
 | :--- | :--- |
 | **LinkedIn** | `https://www.linkedin.com/in/valentin-gemetro-59808a332` |
 | **GitHub** | `https://github.com/ValenSecundaria` |
-| **Demo: Tienda River** | `https://proyecto-2-gemetro-didier-c6ni.vercel.app/` |
+| **Demo: Tienda River** | `https://github.com/ValenSecundaria/Tienda-River` |
 | **Demo: Predictor Mundial** | `https://predictor-de-mundiales-plataforma-f.vercel.app/` |
 | **Demo: Previa App** | `https://junta-amigos-app.vercel.app/` |
 
